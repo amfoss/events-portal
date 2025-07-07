@@ -25,7 +25,10 @@ jobs:
       - name: Build React app
         run: |
           npm run build
-
+          
+      - name: Add CNAME file for custom domain
+        run: echo 'events.amfoss.in' > build/CNAME
+        
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
