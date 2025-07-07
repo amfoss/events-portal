@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+<div align="center">  
+  <h1>amFOSS Events</h1>  
+  <p>A centralized repository for landing pages of latest amFOSS events</p>  
+</div>  
+  
+---  
+  
+amFOSS Events serves as the centralized repository and entry point for all recent and upcoming events organized by amFOSS. It hosts the source code and content for the landing pages of events, allowing members to manage, update, and track event-related materials in a version-controlled environment.  
+  
+# Tech Stack  
+  
+- **Frontend:**    
+  - [React](https://react.dev/)
+  - [Tailwind CSS](https://tailwindcss.com/)
+  - [Next.js](https://nextjs.org/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  
+# How It Works  
+  
+- Each **event** gets its own configured landing page with registration forms and event details  
+- **Registration data** is stored through external APIs connected to spreadsheet backends  
+- The platform includes **fallback mechanisms** to ensure pages load even when JavaScript fails [6](#4-5)   
+  
+---  
+  
+# Getting Started  
+  
+## Prerequisites  
+  
+- Node.js (v16 or higher recommended)  
+- npm or yarn  
+  
+## Installation & Running  
+  
+1. **Clone this repository:**  
+    ```sh  
+    git clone https://github.com/naveen28204280/hacktober-2024-archive.git  
+    cd hacktober-2024-archive  
+    ```  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. **Start the development server:**  
+    ```sh  
+    npm start  
+    ```
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Event Configuration  
+  
+Each event can be configured by:  
+  
+- **Content Updates:** Modify components in `src/components/` for event-specific information [7](#4-6)   
+- **Styling:** Update CSS and Tailwind classes for event branding  
+- **Registration Logic:** Configure API endpoints and validation rules in registration forms  
+- **Assets:** Replace images and logos in `public/assets/` directory  
+  
+---  
+  
+# Contributing  
+  
+## Adding New Events  
+  
+1. Fork the repository for the new event  
+2. Update content in components  
+3. Configure registration endpoints and validation  
+4. Test and submit pull request  
+  
+## Reporting Issues  
+  
+Create issues with:  
+* **Event Context:** Which event the issue affects  
+* **Description:** Detailed problem description    
+* **Steps to Reproduce:** Clear reproduction steps  
+* **Environment:** Browser, device, and other relevant details  
+  
+---  
+  
+# Deployment  
+  
+Events are automatically deployed via GitHub Actions: [8](#4-7)   
+  
+1. **Automatic:** Push to main branch triggers deployment  
+2. **Manual:** Run `npm run deploy` for immediate deployment  
+3. **Custom Domains:** Configure in repository settings  
