@@ -53,7 +53,7 @@ export default function SwiperCarousel() {
     <div id={"speakers"} className="h-92 max-w-4xl mx-auto my-10 px-6 md:px-10">
       <div>
         <div className="w-fit">
-          <p className="text-4xl font-bold text-white">Speaker&apos;s</p>
+          <p className="text-4xl font-bold text-white">Speakers</p>
           <div className="w-[80%] m-auto mt-1 h-1 bg-gradient-to-r  from-[#FF06E4] to-[#770297]"></div>
         </div>
       </div>

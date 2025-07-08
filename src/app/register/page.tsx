@@ -22,12 +22,12 @@ export default function Component() {
   useEffect(() => {
     setIsDisabled(
       !formData.name.trim() ||
-        !formData.email.trim() ||
-        !formData.roll_no.trim() ||
-        !formData.phone_number.trim()||
-        !formData.checkBox2
-        // !formData.checkBox,    
-        );
+      !formData.email.trim() ||
+      !formData.roll_no.trim() ||
+      !formData.phone_number.trim() ||
+      !formData.checkBox2
+      // !formData.checkBox,    
+    );
   }, [formData]);
 
   const changeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -185,10 +185,10 @@ export default function Component() {
                   htmlFor="acknowledgment-2"
                   className="text-sm text-gray-300 leading-relaxed"
                 >
-                  By signing up for this workshop, I acknowledge that I have read and agree to the
-                  <Link className="text-white hover:text-pink-400 underline" href={"/terms"}>Terms & Condition</Link> ,{" "}
-                    <Link className="text-white hover:text-pink-400 underline" href={"/refund"}>Refund Policy</Link> and{" "}
-                  <Link className="text-white hover:text-pink-400 underline" href={"/privacy"}>Privacy Policy</Link> of amFOSS.
+                  <span>By signing up for this workshop, I acknowledge that I have read and agree to the </span>
+                  <Link className="text-white hover:text-pink-400 underline" href={"/terms"}>Terms & Condition</Link>,{" "}
+                  <Link className="text-white hover:text-pink-400 underline" href={"/refund"}>Refund Policy</Link> and{" "}
+                  <Link className="text-white hover:text-pink-400 underline" href={"/privacy"}>Privacy Policy</Link>.
                 </label>
               </div>
 
@@ -257,7 +257,7 @@ export default function Component() {
               />
               <span className="relative z-10">Register</span>
             </motion.button>
-                        <Link
+            <Link
               href="/contact"
               className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors">
               <HelpCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />

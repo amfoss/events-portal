@@ -11,7 +11,7 @@ export default function ContactPage() {
       <div className="absolute top-6 left-6 z-50">
         <button
           className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
-          onClick={() => {window.history.back();}}
+          onClick={() => { window.history.back(); }}
         >
           <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
           <span className="hidden sm:inline text-sm font-medium">Back</span>
@@ -35,7 +35,7 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-pink-400" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
-                <p className="text-gray-300 text-sm break-all">hridesh693@gmail.com</p>
+                <p className="text-gray-300 text-sm break-all">hridesh699@gmail.com</p>
               </div>
             </div>
 
@@ -48,7 +48,7 @@ export default function ContactPage() {
                 <p className="text-gray-300 text-sm mb-2">+91 9995613985</p>
                 <div className="flex items-center justify-center gap-1 text-xs text-gray-400">
                   <Clock className="w-3 h-3" />
-                  <span>Mon-Fri, 9 AM - 6 PM</span>
+                  <span>Mon-Fri, 5 PM - 12 AM</span>
                 </div>
               </div>
             </div>
@@ -59,7 +59,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-gray-300 text-sm">
-                  Kaniyamuzha Rd, Vrilla S.O<br />
+                  Kaniyampuzha Rd, Vytilla S.O<br />
                   Kochi, Kerala, 682019<br />
                   India
                 </p>
