@@ -27,10 +27,10 @@ jobs:
           npm run build
           
       - name: Add CNAME file for custom domain
-        run: echo 'events.amfoss.in' > build/CNAME
+        run: echo 'events.amfoss.in' > public/CNAME
         
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./public
