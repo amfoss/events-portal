@@ -1,67 +1,36 @@
-<div align="center">  
-  <h1>amFOSS Events</h1>  
-  <p>A centralized repository for landing pages of amFOSS events</p>
-</div>  
-  
-amFOSS Events ([events.amfoss.in](https://events.amfoss.in)) serves as the centralized repository and entry point for all recent and upcoming events organized by amFOSS. It hosts the source code and content for the landing pages of events, allowing members to manage, update, and track event-related materials in a version-controlled environment.  
-  
-# Tech Stack  
-  
-- **Frontend:**    
-  - [React](https://react.dev/)
-  - [Tailwind CSS](https://tailwindcss.com/)
-  
-# How It Works  
-  
-- Each **event** gets its own configured landing page with registration forms and event details.
-- **Registration data** is stored through external APIs connected to spreadsheet backends.
-- The platform includes **fallback mechanisms** to ensure pages load even when JavaScript fails.
-  
-# Getting Started  
-  
-## Prerequisites  
-  
-- Node.js (v16 or higher recommended)  
-- npm or yarn  
-  
-## Installation & Running  
-  
-1. **Clone this repository:**  
-    ```sh  
-    git clone https://github.com/amfoss/Club-Events-Portal.git
-    cd Club-Events-Portal
-    ```  
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-2. **Start the development server:**  
-    ```sh
-    npm install
-    npm start  
-    ```
+## Getting Started
 
-# Event Configuration  
-  
-Each event can be configured by:  
-  
-- **Content Updates:** Modify components in `src/components/` for event-specific information.
-- **Styling:** Update CSS and Tailwind classes for event branding.
-- **Registration Logic:** Configure API endpoints and validation rules in registration forms.
-- **Assets:** Replace images and logos in `public/assets/` directory.
-  
-# Contributing  
-  
-## Adding New Events  
-  
-1. Fork the repository for the new event.
-2. Update content in components.
-3. Configure registration endpoints and validation.
-4. Test and submit a pull request.
-  
-# Deployment  
+First, run the development server:
 
-The portal is hosted at [events.amfoss.in](https://events.amfoss.in).
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Events are automatically deployed via GitHub Actions:
-  
-1. **Automatic:** Push to the main branch triggers deployment  
-2. **Manual:** Run `npm run deploy` for immediate deployment.
-3. **Custom Domains:** Configure in repository settings.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
