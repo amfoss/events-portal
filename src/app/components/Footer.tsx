@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Timer from "./Timer";
 import Image from "next/image";
-import amFoss2 from "@/public/amFOSS2.png";
+// import amFoss2 from "@/public/amFOSS2.png";
 import X from "@/public/x-social-media-black-icon.png";
 import Link from "next/link";
 import { Github, Linkedin, Instagram } from "lucide-react";
