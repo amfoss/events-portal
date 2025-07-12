@@ -6,9 +6,10 @@ import { ToastContainer, toast } from "react-toastify";
 import { ArrowLeft, HelpCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-//  import axios from "axios";
+// import axios from "axios";
 
 export default function Component() {
+
   const [formData, setFormData] = useState<FormData>({
     email: "",
     name: "",
@@ -18,15 +19,21 @@ export default function Component() {
     checkBox2: false,
   });
   const [isDisabled, setIsDisabled] = useState(true);
-
+  const [error, setError] = useState("");
+  // const [currentSeats,setCurrentSeats]=useState(70)
+  // useEffect(()=>{const getSeats=async()=>{
+  //   setCurrentSeats((await axios.get("http://127.0.0.1:5000/seats-left/")).data.seat_left)
+  // }
+  // getSeats()},[])
   useEffect(() => {
+    
     setIsDisabled(
       !formData.name.trim() ||
       !formData.email.trim() ||
       !formData.roll_no.trim() ||
       !formData.phone_number.trim() ||
-      !formData.checkBox2
-      // !formData.checkBox,    
+      !formData.checkBox2 ||
+      !formData.checkBox,    
     );
   }, [formData]);
 
@@ -40,7 +47,6 @@ export default function Component() {
   };
 
   const isValidPhone = (phone: string): boolean => {
-    console.log(phone);
     const phoneRegex = /^[6-9]\d{9}$/;
     console.log(phoneRegex.test(phone));
     return phoneRegex.test(phone);
@@ -62,7 +68,6 @@ export default function Component() {
     const validPhone = isValidPhone(formData.phone_number);
     if (formData.name !== "" && validEmail && validRoll && validPhone) {
       // sendData()
-      console.log("SendData");
     } else {
       if (formData.name === "") toast.warn("Please Enter Your Name.");
       else if (!validEmail) toast.warn("Enter A Valid Email Id");
@@ -70,10 +75,26 @@ export default function Component() {
       else if (!validPhone) toast.warn("Enter A Valid Phone Number");
     }
   };
-  // const sendData=async()=>{
-  //   const res=await axios.post("http://127.0.0.1:5000/create_order/",formData)
-  //   console.log(res.data)
-  // }
+
+
+//   const sendData = async () => {
+//    try {
+//       const res = await axios.post("http://127.0.0.1:5000/create_order/", formData);
+//      if (res.status === 200) {
+//         localStorage.setItem("orderId", res.data.merchantOrderId);
+//         window.location.href = res.data.redirectUrl;
+//       } else {
+//        setError(res.data.error || "An error occurred while processing your request.");
+//      }
+//    } catch (error: any) {
+//      setError(
+//        error?.response?.data?.error ||
+//          error?.message ||
+//          "An error occurred while processing your request."
+//      );
+//    }
+//  }
+  
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#4d0929] via-[#000000] to-[#3c1c3f] relative px-6">
       <Image
@@ -99,6 +120,24 @@ export default function Component() {
           <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
           <span className="hidden sm:inline text-sm font-medium">Back</span>
         </Link>
+      </div>
+
+      <div
+        id="Popup"
+        className={`fixed inset-0 z-50 flex items-center ${error === "" ? "hidden":"visible"} justify-center bg-black/60 backdrop-blur-sm transition-all duration-300`}
+      >
+        <div className="bg-gradient-to-br from-[#4d0929] via-[#000000] to-[#3c1c3f] border border-pink-500 rounded-2xl shadow-2xl p-8 max-w-md w-full text-center">
+          <h1 className="text-2xl font-bold text-white mb-4">Payment Error</h1>
+          <p className="text-gray-300 mb-6">{error}</p>
+          <button
+        className="mt-2 px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-semibold transition"
+        onClick={() => {
+          setError("");
+        }}
+          >
+        Close
+          </button>
+        </div>
       </div>
 
 
@@ -156,7 +195,7 @@ export default function Component() {
                 maxLength={10}
                 className="w-full px-4 py-3 bg-black/30 border border-pink-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500"
               />
-              {/* <div className="flex items-start space-x-3 mt-6">
+              <div className="flex items-start space-x-3 mt-6">
                 <input
                   type="checkbox"
                   name="checkBox"
@@ -172,7 +211,7 @@ export default function Component() {
                   participation does not grant me membership or free entry into
                   amFOSS
                 </label>
-              </div> */}
+              </div>
               <div className="flex items-start space-x-3 mt-6">
                 <input
                   type="checkbox"
@@ -186,9 +225,9 @@ export default function Component() {
                   className="text-sm text-gray-300 leading-relaxed"
                 >
                   <span>By signing up for this workshop, I acknowledge that I have read and agree to the </span>
-                  <Link className="text-white hover:text-pink-400 underline" href={"/terms"}>Terms & Condition</Link>,{" "}
-                  <Link className="text-white hover:text-pink-400 underline" href={"/refund"}>Refund Policy</Link> and{" "}
-                  <Link className="text-white hover:text-pink-400 underline" href={"/privacy"}>Privacy Policy</Link>.
+                  <Link className="text-white hover:text-pink-400 transition-colors underline" href={"/terms"}>Terms & Condition</Link>,{" "}
+                  <Link className="text-white hover:text-pink-400 transition-colors underline" href={"/refund"}>Refund Policy</Link> and{" "}
+                  <Link className="text-white hover:text-pink-400 transition-colors underline" href={"/privacy"}>Privacy Policy</Link>.
                 </label>
               </div>
 

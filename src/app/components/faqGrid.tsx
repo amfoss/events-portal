@@ -46,11 +46,11 @@ const FaqCard = ({ faq }: { faq: FAQ }) => {
 
 export default function FaqGrid() {
   const faqs: FAQ[] = [
-    // {
-    //   question: "Will I get amfoss membership if pay for this workshop?",
-    //   answer:
-    //     "No, attending or paying for this workshop does not guarantee amFOSS membership.",
-    // },
+    {
+      question: "Will I get amfoss membership if pay for this workshop?",
+      answer:
+        "No, attending or paying for this workshop does not guarantee amFOSS membership.",
+    },
     {
       question: "What is this workshop about?",
       answer:
@@ -76,11 +76,11 @@ export default function FaqGrid() {
       answer:
         "Not at all. This workshop is meant for complete beginners. We’ll guide you step-by-step.",
     },
-    // {
-    //   question: "Will I get a certificate?",
-    //   answer:
-    //     "Yes! All participants who complete the workshop will receive a certificate of participation.",
-    // },
+    {
+      question: "Will I get a certificate?",
+      answer:
+        "Yes! All participants who complete the workshop will receive a certificate of participation.",
+    },
     {
       question: "How do I register?",
       answer:
@@ -91,11 +91,11 @@ export default function FaqGrid() {
       answer:
         "Just bring: Your laptop and charger, A notebook and pen (optional), Lots of energy and questions!",
     },
-    // {
-    //   question: "Who is organizing this workshop?",
-    //   answer:
-    //     "This workshop is organized by amFOSS, a student community at Amrita Vishwa Vidyapeetham focused on open source, programming, and tech outreach.",
-    // },
+    {
+      question: "Who is organizing this workshop?",
+      answer:
+        "This workshop is organized by amFOSS, a student community at Amrita Vishwa Vidyapeetham focused on open source, programming, and tech outreach.",
+    },
   ];
   return (
     <div id="faq" className="max-w-4xl mx-auto my-20 md:my-0 px-6 md:px-10">

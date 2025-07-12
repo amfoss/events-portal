@@ -1,6 +1,6 @@
 'use client'
 import { ArrowLeft, Mail, Phone, MapPin, Scale, Clock } from "lucide-react";
-
+import {motion} from "framer-motion"
 export default function ContactPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#4d0929] via-[#000000] to-[#3c1c3f] relative px-6">
@@ -17,7 +17,10 @@ export default function ContactPage() {
           <span className="hidden sm:inline text-sm font-medium">Back</span>
         </button>
       </div>
-      <div className="max-w-4xl mx-auto w-full z-10 my-20">
+      <motion.div
+          initial={{y:100, opacity:0}}
+    animate={{y:0,opacity:1}}
+    transition={{duration:0.6}} className="max-w-4xl mx-auto w-full z-10 my-20">
         <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-gray-700 shadow-2xl shadow-pink-900/20">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-white tracking-wide mb-4">
@@ -86,7 +89,7 @@ export default function ContactPage() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
