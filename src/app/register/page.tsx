@@ -123,7 +123,7 @@ export default function Component() {
       <ToastContainer />
       <div className="absolute top-6 left-6 z-50">
         <Link
-          href="/"
+          href="https://events.amfoss.in/"
           className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
         >
           <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
