@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/next';
 import { Geist, Geist_Mono, Lalezar, Lekton, Outfit } from "next/font/google";
 import "./globals.css";
 const outfitSans = Outfit({
@@ -41,6 +42,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${lalezarSans.variable} ${outfitSans.variable} ${lektonSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
