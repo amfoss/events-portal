@@ -1,6 +1,7 @@
 "use client";
 import { ArrowLeft, Mail, Phone, MapPin, Scale, Clock } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 export default function ContactPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#4d0929] via-[#000000] to-[#3c1c3f] relative px-6">
@@ -9,13 +10,13 @@ export default function ContactPage() {
         <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
       </div>
       <div className="absolute top-6 left-6 z-50">
-        <a
+        <Link
           className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
-          href="https://events.amfoss.in/"
+          href="/"
         >
           <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
           <span className="hidden sm:inline text-sm font-medium">Back</span>
-        </a>
+        </Link>
       </div>
       <motion.div
         initial={{ y: 100, opacity: 0 }}
@@ -68,9 +69,9 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-gray-300 text-sm">
-                  Kaniyampuzha Rd, Vytilla S.O
+                  Amrita Amritapuri,
                   <br />
-                  Kochi, Kerala, 682019
+                  Clappana P O, Kollam – 690525,
                   <br />
                   India
                 </p>
@@ -84,13 +85,7 @@ export default function ContactPage() {
                 <h3 className="text-white font-semibold mb-2">
                   Legal Entity Name
                 </h3>
-                <p className="text-gray-300 text-sm">
-                  HRIDESH
-                  <br />
-                  MATTAKATHARA
-                  <br />
-                  GOPAKUMAR
-                </p>
+                <p className="text-gray-300 text-sm">amFoss</p>
               </div>
             </div>
           </div>

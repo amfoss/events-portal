@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowLeft, Check, Clock, XCircle } from "lucide-react";
 import axios from "axios";
+import Link from "next/link";
 
 export default function PaymentScreen() {
   // const isProcessing = false;
@@ -13,23 +14,30 @@ export default function PaymentScreen() {
 
   useEffect(() => {
     async function fetchPaymentStatus() {
-      const res = await axios.get(
-        process.env.NEXT_PUBLIC_BACKEND_URL +
-          "/payment-confirmation/" +
-          localStorage.getItem("orderId"),
-      );
-      if (res.data.success) {
+      try {
+        const res = await axios.get(
+          process.env.NEXT_PUBLIC_BACKEND_URL +
+            "/payment-confirmation/" +
+            localStorage.getItem("orderId"),
+        );
+        if (res.status === 200) {
+          setIsProcessing(false);
+          setTransactionId(res.data.transactionId);
+
+          if (res.data.paymentStatus === "success") {
+            setPaymentSucess(true);
+          } else {
+            setPaymentSucess(false);
+          }
+        } else {
+          console.log("Unexpected status:", res.status);
+        }
+      } catch (error) {
         setIsProcessing(false);
-        setTransactionId(res.data.transactionId);
-        setPaymentSucess(true);
-      } else if (!res.data.success) {
-        setIsProcessing(false);
-        setTransactionId(res.data.transactionId);
-        setPaymentSucess(false);
-      } else {
-        console.log("Still processing:", res.data.state);
+        console.error("Error fetching payment status:", error);
       }
     }
+
     fetchPaymentStatus();
   }, []);
 
@@ -50,13 +58,13 @@ export default function PaymentScreen() {
 
   const BackButton = () => (
     <div className="absolute top-6 left-6 z-50">
-      <a
-        href="https://events.amfoss.in/"
+      <Link
+        href="/"
         className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
       >
         <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
         <span className="hidden sm:inline text-sm font-medium">Back</span>
-      </a>
+      </Link>
     </div>
   );
 

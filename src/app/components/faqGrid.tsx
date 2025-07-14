@@ -98,10 +98,7 @@ export default function FaqGrid() {
     },
   ];
   return (
-    <div
-      id="faq"
-      className="max-w-4xl mx-auto mt-[40vh] md:mt-[0vh] px-6 md:px-10"
-    >
+    <div id="faq" className="max-w-4xl mx-auto mt-[40vh] sm:mt-0 px-6 md:px-10">
       <div>
         <div className="mb-8 w-fit">
           <p className="text-4xl font-bold text-white">FAQs</p>

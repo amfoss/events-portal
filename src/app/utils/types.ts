@@ -16,6 +16,7 @@ export interface Speakers {
   name: string;
   image: StaticImageData;
   desc: string;
+  linkedIn: string;
 }
 
 export interface FormData {

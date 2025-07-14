@@ -28,7 +28,7 @@ export default function WorkshopPage() {
   }, []);
   return (
     <>
-      <div className="min-h-screen z-10 bg-gradient-to-b text-white from-[#202020] to-[#000] overflow-x-hidden">
+      <div className="min-h-screen z-10 bg-gradient-to-b text-white from-[#0f0f0f] to-[#000] overflow-x-hidden">
         <Image
           alt="Background"
           width={1200}
