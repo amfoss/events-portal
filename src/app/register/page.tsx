@@ -30,10 +30,10 @@ export default function Component() {
   useEffect(() => {
     setIsDisabled(
       !formData.name.trim() ||
-        !formData.email.trim() ||
-        !formData.roll_no.trim() ||
-        !formData.phone_number.trim() ||
-        !formData.checkBox,
+      !formData.email.trim() ||
+      !formData.roll_no.trim() ||
+      !formData.phone_number.trim() ||
+      !formData.checkBox,
     );
   }, [formData]);
 
@@ -58,7 +58,7 @@ export default function Component() {
   };
 
   const isValidRollNumber = (roll: string): boolean => {
-    const rollRegex = /^am\.[a-z]{2}\.[a-z0-9]{10}$/;
+    const rollRegex = /^am\.[a-z]{2}\.[a-z0-9]{10}$/i;
     return rollRegex.test(roll);
   };
 
