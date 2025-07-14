@@ -6,34 +6,34 @@ import { ToastContainer, toast } from "react-toastify";
 import { ArrowLeft, HelpCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-// import axios from "axios";
+import axios from "axios";
 
 export default function Component() {
-
   const [formData, setFormData] = useState<FormData>({
     email: "",
     name: "",
     roll_no: "",
     phone_number: "",
     checkBox: false,
-    checkBox2: false,
   });
   const [isDisabled, setIsDisabled] = useState(true);
   const [error, setError] = useState("");
-  // const [currentSeats,setCurrentSeats]=useState(70)
-  // useEffect(()=>{const getSeats=async()=>{
-  //   setCurrentSeats((await axios.get("http://127.0.0.1:5000/seats-left/")).data.seat_left)
-  // }
-  // getSeats()},[])
+  const [currentSeats, setCurrentSeats] = useState(70);
   useEffect(() => {
-    
+    const getSeats = async () => {
+      setCurrentSeats(
+        (await axios.get("http://127.0.0.1:5000/seats-left/")).data.seat_left,
+      );
+    };
+    getSeats();
+  }, []);
+  useEffect(() => {
     setIsDisabled(
       !formData.name.trim() ||
-      !formData.email.trim() ||
-      !formData.roll_no.trim() ||
-      !formData.phone_number.trim() ||
-      !formData.checkBox2 ||
-      !formData.checkBox,    
+        !formData.email.trim() ||
+        !formData.roll_no.trim() ||
+        !formData.phone_number.trim() ||
+        !formData.checkBox,
     );
   }, [formData]);
 
@@ -67,7 +67,7 @@ export default function Component() {
     const validRoll = isValidRollNumber(formData.roll_no);
     const validPhone = isValidPhone(formData.phone_number);
     if (formData.name !== "" && validEmail && validRoll && validPhone) {
-      // sendData()
+      sendData();
     } else {
       if (formData.name === "") toast.warn("Please Enter Your Name.");
       else if (!validEmail) toast.warn("Enter A Valid Email Id");
@@ -76,25 +76,33 @@ export default function Component() {
     }
   };
 
+  const sendData = async () => {
+    try {
+      const res = await axios.post(
+        "http://127.0.0.1:5000/create_order/",
+        formData,
+      );
+      if (res.status === 200) {
+        localStorage.setItem("orderId", res.data.merchantOrderId);
+        window.location.href = res.data.redirectUrl;
+      } else {
+        setError(
+          res.data.error || "An error occurred while processing your request.",
+        );
+      }
+    } catch (error) {
+      let message = "An error occurred while processing your request.";
 
-//   const sendData = async () => {
-//    try {
-//       const res = await axios.post("http://127.0.0.1:5000/create_order/", formData);
-//      if (res.status === 200) {
-//         localStorage.setItem("orderId", res.data.merchantOrderId);
-//         window.location.href = res.data.redirectUrl;
-//       } else {
-//        setError(res.data.error || "An error occurred while processing your request.");
-//      }
-//    } catch (error: any) {
-//      setError(
-//        error?.response?.data?.error ||
-//          error?.message ||
-//          "An error occurred while processing your request."
-//      );
-//    }
-//  }
-  
+      if (axios.isAxiosError(error)) {
+        message = error.response?.data?.error || error.message || message;
+      } else if (error instanceof Error) {
+        message = error.message;
+      }
+
+      setError(message);
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#4d0929] via-[#000000] to-[#3c1c3f] relative px-6">
       <Image
@@ -124,22 +132,21 @@ export default function Component() {
 
       <div
         id="Popup"
-        className={`fixed inset-0 z-50 flex items-center ${error === "" ? "hidden":"visible"} justify-center bg-black/60 backdrop-blur-sm transition-all duration-300`}
+        className={`fixed inset-0 z-50 flex items-center ${error === "" ? "hidden" : "visible"} justify-center bg-black/60 backdrop-blur-sm transition-all duration-300`}
       >
         <div className="bg-gradient-to-br from-[#4d0929] via-[#000000] to-[#3c1c3f] border border-pink-500 rounded-2xl shadow-2xl p-8 max-w-md w-full text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Payment Error</h1>
           <p className="text-gray-300 mb-6">{error}</p>
           <button
-        className="mt-2 px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-semibold transition"
-        onClick={() => {
-          setError("");
-        }}
+            className="mt-2 px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-semibold transition"
+            onClick={() => {
+              setError("");
+            }}
           >
-        Close
+            Close
           </button>
         </div>
       </div>
-
 
       <motion.div
         initial={{ opacity: 0, y: 80 }}
@@ -212,7 +219,7 @@ export default function Component() {
                   amFOSS
                 </label>
               </div>
-              <div className="flex items-start space-x-3 mt-6">
+              {/* <div className="flex items-start space-x-3 mt-6">
                 <input
                   type="checkbox"
                   name="checkBox2"
@@ -224,13 +231,33 @@ export default function Component() {
                   htmlFor="acknowledgment-2"
                   className="text-sm text-gray-300 leading-relaxed"
                 >
-                  <span>By signing up for this workshop, I acknowledge that I have read and agree to the </span>
-                  <Link className="text-white hover:text-pink-400 transition-colors underline" href={"/terms"}>Terms & Condition</Link>,{" "}
-                  <Link className="text-white hover:text-pink-400 transition-colors underline" href={"/refund"}>Refund Policy</Link> and{" "}
-                  <Link className="text-white hover:text-pink-400 transition-colors underline" href={"/privacy"}>Privacy Policy</Link>.
+                  <span>
+                    By signing up for this workshop, I acknowledge that I have
+                    read and agree to the{" "}
+                  </span>
+                  <Link
+                    className="text-white hover:text-pink-400 transition-colors underline"
+                    href={"/terms"}
+                  >
+                    Terms & Condition
+                  </Link>
+                  ,{" "}
+                  <Link
+                    className="text-white hover:text-pink-400 transition-colors underline"
+                    href={"/refund"}
+                  >
+                    Refund Policy
+                  </Link>{" "}
+                  and{" "}
+                  <Link
+                    className="text-white hover:text-pink-400 transition-colors underline"
+                    href={"/privacy"}
+                  >
+                    Privacy Policy
+                  </Link>
+                  .
                 </label>
-              </div>
-
+              </div> */}
             </form>
           </div>
           <motion.div
@@ -276,7 +303,7 @@ export default function Component() {
             <motion.button
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.05 }}
-              disabled={isDisabled}
+              disabled={isDisabled || currentSeats <= 0}
               onClick={validateForm}
               className="relative text-white font-bold py-4 px-12 rounded-lg text-xl overflow-hidden disabled:cursor-not-allowed"
             >
@@ -291,14 +318,15 @@ export default function Component() {
                 className={`
       absolute inset-0 bg-gradient-to-r from-gray-400 to-gray-500 
       transition-opacity duration-500 ease-in-out
-      ${isDisabled ? "opacity-100" : "opacity-0"}
+      ${isDisabled || currentSeats <= 0 ? "opacity-100" : "opacity-0"}
     `}
               />
               <span className="relative z-10">Register</span>
             </motion.button>
             <Link
               href="/contact"
-              className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors">
+              className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
+            >
               <HelpCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
               <span className="text-sm font-medium">Need help? Contact us</span>
             </Link>

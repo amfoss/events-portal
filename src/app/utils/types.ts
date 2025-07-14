@@ -24,5 +24,5 @@ export interface FormData {
   roll_no: string;
   phone_number: string;
   checkBox: boolean;
-  checkBox2: boolean;
+  // checkBox2: boolean;
 }

@@ -34,7 +34,7 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
           href="/register"
           whileHover={{ y: -10 }}
           whileTap={{ scale: 0.8 }}
-          className="bg-gradient-to-r mt-12  from-[#FF06E4] to-[#770297] text-white px-10 py-4 rounded-xl font-Lalezar text-xl sm:text-xl md:text-3xl  font-bold uppercase"
+          className="bg-gradient-to-r mt-12 z-50 from-[#FF06E4] to-[#770297] text-white px-10 py-4 rounded-xl font-Lalezar text-xl sm:text-xl md:text-3xl  font-bold uppercase"
         >
           REGISTER NOW!
         </motion.a>

@@ -49,10 +49,30 @@ export default function Footer() {
         </Link>
       </div>
       <div className="ml-5 flex justify-center my-10 space-x-3 text-xs md:text-md md:space-x-6">
-        <Link className="text-white hover:text-pink-600 transition-all hover:underline" href={"/terms"}>Terms & Condition</Link>
-        <Link className="text-white hover:text-pink-600 transition-all hover:underline" href={"/privacy"}>Privacy Policy</Link>
-        <Link className="text-white hover:text-pink-600 transition-all hover:underline" href={"/refund"}>Refund Policy</Link>
-        <Link className="text-white hover:text-pink-600 transition-all hover:underline" href={"/contact"}>Contact Us</Link>
+        <Link
+          className="text-white hover:text-pink-600 transition-all hover:underline"
+          href={"/terms"}
+        >
+          Terms & Condition
+        </Link>
+        <Link
+          className="text-white hover:text-pink-600 transition-all hover:underline"
+          href={"/privacy"}
+        >
+          Privacy Policy
+        </Link>
+        <Link
+          className="text-white hover:text-pink-600 transition-all hover:underline"
+          href={"/refund"}
+        >
+          Refund Policy
+        </Link>
+        <Link
+          className="text-white hover:text-pink-600 transition-all hover:underline"
+          href={"/contact"}
+        >
+          Contact Us
+        </Link>
       </div>
     </>
   );

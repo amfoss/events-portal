@@ -7,7 +7,7 @@ import { Speakers } from "../utils/types";
 // import placeHolderImg from "@/public/image.png";
 import "swiper/css/pagination";
 import "swiper/css";
-import Hridesh from "@/public/speakers/Hridesh.png"
+import Hridesh from "@/public/speakers/Hridesh.png";
 const speakers: Speakers[] = [
   {
     name: "Hridesh Mg",

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Schedule from "./components/ScheduleGrid";
 import FaqGrid from "./components/faqGrid";
@@ -9,18 +9,22 @@ import NavBar from "./components/navBar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SwiperCarousel from "./components/speakerCarousel";
-// import axios from "axios";
+import axios from "axios";
 export default function WorkshopPage() {
-  // const [currentSeats,setCurrentSeats]=useState(0)
-  const currentSeats = 70;
+  const [currentSeats, setCurrentSeats] = useState(0);
+  // const currentSeats = 70;
   const [showSeats, setShowSeats] = useState(false);
   const triggerSeats = (trigger: boolean) => {
     setShowSeats(trigger);
   };
-  // useEffect(()=>{const getSeats=async()=>{
-  //   setCurrentSeats((await axios.get("http://127.0.0.1:5000/seats-left/")).data.seat_left)
-  // }
-  // getSeats()},[])
+  useEffect(() => {
+    const getSeats = async () => {
+      setCurrentSeats(
+        (await axios.get("http://127.0.0.1:5000/seats-left/")).data.seat_left,
+      );
+    };
+    getSeats();
+  }, []);
   return (
     <>
       <div className="min-h-screen z-10 bg-gradient-to-b text-white from-[#202020] to-[#000] overflow-x-hidden">
