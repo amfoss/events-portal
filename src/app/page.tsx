@@ -20,7 +20,8 @@ export default function WorkshopPage() {
   useEffect(() => {
     const getSeats = async () => {
       setCurrentSeats(
-        (await axios.get("http://127.0.0.1:5000/seats-left/")).data.seat_left,
+        (await axios.get(process.env.NEXT_PUBLIC_BACKEND_URL + "/seats-left/"))
+          .data.seat_left,
       );
     };
     getSeats();

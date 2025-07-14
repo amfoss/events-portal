@@ -27,7 +27,7 @@ function getTimeLeft(targetDate: Date) {
 }
 
 export default function Timer() {
-  const targetDate = new Date("2025-07-18T00:00:00");
+  const targetDate = new Date("2025-07-28T00:00:00");
   const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
   useEffect(() => {
     const interval = setInterval(() => {

@@ -22,7 +22,8 @@ export default function Component() {
   useEffect(() => {
     const getSeats = async () => {
       setCurrentSeats(
-        (await axios.get("http://127.0.0.1:5000/seats-left/")).data.seat_left,
+        (await axios.get(process.env.NEXT_PUBLIC_BACKEND_URL + "/seats-left/"))
+          .data.seat_left,
       );
     };
     getSeats();
@@ -30,10 +31,10 @@ export default function Component() {
   useEffect(() => {
     setIsDisabled(
       !formData.name.trim() ||
-      !formData.email.trim() ||
-      !formData.roll_no.trim() ||
-      !formData.phone_number.trim() ||
-      !formData.checkBox,
+        !formData.email.trim() ||
+        !formData.roll_no.trim() ||
+        !formData.phone_number.trim() ||
+        !formData.checkBox,
     );
   }, [formData]);
 
@@ -79,7 +80,7 @@ export default function Component() {
   const sendData = async () => {
     try {
       const res = await axios.post(
-        "http://127.0.0.1:5000/create_order/",
+        process.env.NEXT_PUBLIC_BACKEND_URL + "/create_order/",
         formData,
       );
       if (res.status === 200) {

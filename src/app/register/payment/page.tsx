@@ -14,16 +14,15 @@ export default function PaymentScreen() {
   useEffect(() => {
     async function fetchPaymentStatus() {
       const res = await axios.get(
-        "http://127.0.0.1:5000/payment-confirmation/" +
+        process.env.NEXT_PUBLIC_BACKEND_URL +
+          "/payment-confirmation/" +
           localStorage.getItem("orderId"),
       );
       if (res.data.success) {
-        console.log(res.data);
         setIsProcessing(false);
         setTransactionId(res.data.transactionId);
         setPaymentSucess(true);
       } else if (!res.data.success) {
-        console.log(res.data);
         setIsProcessing(false);
         setTransactionId(res.data.transactionId);
         setPaymentSucess(false);
@@ -51,13 +50,13 @@ export default function PaymentScreen() {
 
   const BackButton = () => (
     <div className="absolute top-6 left-6 z-50">
-      <button
-        onClick={() => (window.location.href = "/")}
+      <a
+        href="https://events.amfoss.in/"
         className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
       >
         <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
         <span className="hidden sm:inline text-sm font-medium">Back</span>
-      </button>
+      </a>
     </div>
   );
 
@@ -259,12 +258,12 @@ export default function PaymentScreen() {
               transition={{ delay: 1.3 }}
               className="space-y-3"
             >
-              <button
+              <a
                 className="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-3 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-                onClick={() => (window.location.href = "/register")}
+                href="https://openworkshop.vercel.app/register"
               >
                 Try Again
-              </button>
+              </a>
             </motion.div>
           </motion.div>
         </div>

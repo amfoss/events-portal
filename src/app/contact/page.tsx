@@ -9,15 +9,13 @@ export default function ContactPage() {
         <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
       </div>
       <div className="absolute top-6 left-6 z-50">
-        <button
+        <a
           className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
-          onClick={() => {
-            window.history.back();
-          }}
+          href="https://events.amfoss.in/"
         >
           <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
           <span className="hidden sm:inline text-sm font-medium">Back</span>
-        </button>
+        </a>
       </div>
       <motion.div
         initial={{ y: 100, opacity: 0 }}
@@ -44,7 +42,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-gray-300 text-sm break-all">
-                  hridesh699@gmail.com
+                  amritapurifoss@gmail.com
                 </p>
               </div>
             </div>
@@ -55,6 +53,7 @@ export default function ContactPage() {
                   <Phone className="w-6 h-6 text-purple-400" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
+                <p className="text-gray-300 text-sm mb-2">+91 9995613985</p>
                 <p className="text-gray-300 text-sm mb-2">+91 9995613985</p>
                 <div className="flex items-center justify-center gap-1 text-xs text-gray-400">
                   <Clock className="w-3 h-3" />

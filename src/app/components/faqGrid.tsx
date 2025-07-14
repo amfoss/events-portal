@@ -52,6 +52,11 @@ export default function FaqGrid() {
         "No, attending or paying for this workshop does not guarantee amFOSS membership.",
     },
     {
+      question: "Do I need to know how to code?",
+      answer:
+        "Not at all. This workshop is meant for complete beginners. We’ll guide you step-by-step.",
+    },
+    {
       question: "What is this workshop about?",
       answer:
         "This workshop is designed to introduce you to the world of technology, coding, and problem solving. Whether you're from a technical background or not, it will help you build foundational skills in programming, version control (Git), Linux, and more.",
@@ -70,11 +75,6 @@ export default function FaqGrid() {
       question: "Is this workshop free?",
       answer:
         "Not quite – it’s ₹1499! That gets you 14 days packed with hands-on learning, exciting projects, and a whole lot of fun. It’s an experience your future self will totally thank you for. 😎🚀",
-    },
-    {
-      question: "Do I need to know how to code?",
-      answer:
-        "Not at all. This workshop is meant for complete beginners. We’ll guide you step-by-step.",
     },
     {
       question: "Will I get a certificate?",
@@ -98,7 +98,10 @@ export default function FaqGrid() {
     },
   ];
   return (
-    <div id="faq" className="max-w-4xl mx-auto my-20 md:my-0 px-6 md:px-10">
+    <div
+      id="faq"
+      className="max-w-4xl mx-auto mt-[40vh] md:mt-[0vh] px-6 md:px-10"
+    >
       <div>
         <div className="mb-8 w-fit">
           <p className="text-4xl font-bold text-white">FAQs</p>

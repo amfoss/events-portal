@@ -10,17 +10,13 @@ export default function RefundPolicyPage() {
       </div>
 
       <div className="absolute top-6 left-6 z-50">
-        <button className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors">
+        <a
+          href="https://events.amfoss.in/"
+          className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
+        >
           <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
-          <span
-            className="hidden sm:inline text-sm font-medium"
-            onClick={() => {
-              window.history.back();
-            }}
-          >
-            Back
-          </span>
-        </button>
+          <span className="hidden sm:inline text-sm font-medium">Back</span>
+        </a>
       </div>
 
       <motion.div
