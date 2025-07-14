@@ -24,7 +24,7 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
           className="mt-40 text-white text-xl sm:text-xl md:text-3xl transition-colors font-Lalezar flex flex-wrap items-center justify-center text-center px-4"
         >
           Only
-          <div className="bg-gradient-to-r  Z-50 from-[#FF06E4] to-[#770297] text-white flex items-center rounded-md px-3 py-1 mx-4 text-xl sm:text-xl md:text-3xl ">
+          <div className="bg-gradient-to-r  z-50 from-[#FF06E4] to-[#770297] text-white flex items-center rounded-md px-3 py-1 mx-4 text-xl sm:text-xl md:text-3xl ">
             {currentSeats + " seats"}
           </div>
           left, register today!
