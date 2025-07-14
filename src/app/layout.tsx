@@ -28,7 +28,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "amFOSS Workshop",
-  description: "You'r First Step Into Freedom Starts Here",
+  description: "Your First Step Into Freedom Starts Here",
 };
 
 export default function RootLayout({

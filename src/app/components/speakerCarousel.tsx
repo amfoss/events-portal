@@ -15,7 +15,7 @@ const speakers: Speakers[] = [
   {
     name: "Hridesh Mg",
     image: Hridesh,
-    desc: "Hridesh MG is a systems programming enthusiast with practical experience in low-level development and open-source contributions. He has submitted patches to the Linux Kernel as part of the LFX program and is currently a Google Summer Of Code (GSoC) contributor with CCExtractor.<br /><br/> Having been in your shoes not long ago, he’s eager to share how you can get started in open source too.",
+    desc: "Hridesh MG is a systems programming enthusiast with practical experience in low-level development and open-source contributions. He has submitted patches to the Linux Kernel as part of the LFX program and is currently a Google Summer Of Code (GSoC) contributor with CCExtractor.<br /><br/> With 3 Hackathon wins under his belt and having been in your shoes not long ago, he’s happy to share what he’s learned to help you get started",
     linkedIn: "https://www.linkedin.com/in/hridesh-mg/",
   },
   {
@@ -37,7 +37,7 @@ const SpeakerCard = (props: { speaker: Speakers }) => {
       <Image
         src={props.speaker.image}
         alt="Speaker Image"
-        className="w-36 h-36 sm:w-48 sm:h-48 rounded-lg object-cover shrink-0 mx-auto sm:mx-0"
+        className="w-42 h-42 sm:w-54 sm:h-54 rounded-lg object-cover shrink-0 mx-auto sm:mx-0"
       />
       <div className="text-center sm:text-left max-w-2xl">
         <div className="flex items-center justify-center sm:justify-start gap-2">

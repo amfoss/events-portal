@@ -88,7 +88,7 @@ export default function Schedule() {
       category: "AI Integration",
       day: 13,
       topic:
-        "Building your first Flutter app with AI integration - the future of development.",
+        "Integrating your first Flutter app with AI - the future of development.",
     },
     {
       no: 14,
