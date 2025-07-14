@@ -34,7 +34,7 @@ export default function Schedule() {
       no: 5,
       category: "GitHub & Open Source",
       day: 5,
-      topic: "GitHub, GitLab, and Open Source",
+      topic: "Introduction to GitHub, GitLab and the essence of open source development.",
     },
     {
       no: 6,
@@ -75,13 +75,13 @@ export default function Schedule() {
       no: 11,
       category: "Flutter Development",
       day: 11,
-      topic: "Flutter development (continued)",
+      topic: "Layouts, Interactivity & Navigation in Flutter.",
     },
     {
       no: 12,
       category: "Flutter Advanced",
       day: 12,
-      topic: "Continue with Flutter development and explore advanced concepts.",
+      topic: "Routing, Forms & State Management in Flutter.",
     },
     {
       no: 13,
@@ -94,7 +94,7 @@ export default function Schedule() {
       no: 14,
       category: "Open Source Future",
       day: 14,
-      topic: "Going further with Open Source",
+      topic: "From Small Fixes to Meaningful Contributions — mentorships, GSoC, Outreachy, and beyond.",
     },
   ];
 
