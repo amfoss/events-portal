@@ -9,6 +9,8 @@ import Link from "next/link";
 import axios from "axios";
 
 export default function Component() {
+  const [isRegTimeOver, setRegTimeOver] = useState(false);
+  const targetDate = new Date("2025-07-28T00:00:00");
   const [formData, setFormData] = useState<FormData>({
     email: "",
     name: "",
@@ -18,7 +20,25 @@ export default function Component() {
   });
   const [isDisabled, setIsDisabled] = useState(true);
   const [error, setError] = useState("");
-  const [currentSeats, setCurrentSeats] = useState(70);
+  const [currentSeats, setCurrentSeats] = useState(0);
+  useEffect(() => {
+    const checkIsRegClosed = () => {
+      const now = new Date();
+      setRegTimeOver(
+        Math.floor((targetDate.getTime() - now.getTime()) / 1000) <= 0,
+      );
+    };
+    checkIsRegClosed();
+  }, [isDisabled]);
+
+  useEffect(() => {
+    const now = new Date();
+    if (Math.floor((targetDate.getTime() - now.getTime()) / 1000) <= 0) {
+      toast.error("Registrations are currently closed");
+    }if(currentSeats<=0){
+      toast.error("All spots are taken!")
+    }
+  }, []);
   useEffect(() => {
     const getSeats = async () => {
       setCurrentSeats(
@@ -27,7 +47,7 @@ export default function Component() {
       );
     };
     getSeats();
-  }, []);
+  }, [isDisabled]);
   useEffect(() => {
     setIsDisabled(
       !formData.name.trim() ||
@@ -49,7 +69,6 @@ export default function Component() {
 
   const isValidPhone = (phone: string): boolean => {
     const phoneRegex = /^[6-9]\d{9}$/;
-    console.log(phoneRegex.test(phone));
     return phoneRegex.test(phone);
   };
 
@@ -213,7 +232,7 @@ export default function Component() {
                 />
                 <label
                   htmlFor="acknowledgment"
-                  className="text-sm text-gray-300 leading-relaxed"
+                  className="text-sm text-gray-300 font-bold leading-relaxed"
                 >
                   By signing up for this workshop, I acknowledge that
                   participation does not grant me membership or free entry into
@@ -304,7 +323,7 @@ export default function Component() {
             <motion.button
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.05 }}
-              disabled={isDisabled || currentSeats <= 0}
+              disabled={isDisabled || currentSeats <= 0 || isRegTimeOver}
               onClick={validateForm}
               className="relative text-white font-bold py-4 px-12 rounded-lg text-xl overflow-hidden disabled:cursor-not-allowed"
             >
@@ -312,17 +331,17 @@ export default function Component() {
                 className={`
       absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 
       transition-opacity duration-500 ease-in-out
-      ${isDisabled ? "opacity-0" : "opacity-100"}
+      ${isDisabled || currentSeats <= 0 || isRegTimeOver ? "opacity-0" : "opacity-100"}
     `}
               />
               <span
                 className={`
       absolute inset-0 bg-gradient-to-r from-gray-400 to-gray-500 
       transition-opacity duration-500 ease-in-out
-      ${isDisabled || currentSeats <= 0 ? "opacity-100" : "opacity-0"}
+      ${isDisabled || currentSeats <= 0 || isRegTimeOver ? "opacity-100" : "opacity-0"}
     `}
               />
-              <span className="relative z-10">Register</span>
+              <span className="relative z-10">Pay</span>
             </motion.button>
             <Link
               href="/contact"

@@ -34,7 +34,8 @@ export default function Schedule() {
       no: 5,
       category: "GitHub & Open Source",
       day: 5,
-      topic: "Introduction to GitHub, GitLab and the essence of open source development.",
+      topic:
+        "Introduction to GitHub, GitLab and the essence of open source development.",
     },
     {
       no: 6,
@@ -94,7 +95,8 @@ export default function Schedule() {
       no: 14,
       category: "Open Source Future",
       day: 14,
-      topic: "From Small Fixes to Meaningful Contributions — mentorships, GSoC, Outreachy, and beyond.",
+      topic:
+        "From Small Fixes to Meaningful Contributions — mentorships, GSoC, Outreachy, and beyond.",
     },
   ];
 
