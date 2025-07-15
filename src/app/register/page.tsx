@@ -35,8 +35,9 @@ export default function Component() {
     const now = new Date();
     if (Math.floor((targetDate.getTime() - now.getTime()) / 1000) <= 0) {
       toast.error("Registrations are currently closed");
-    }if(currentSeats<=0){
-      toast.error("All spots are taken!")
+    }
+    if (currentSeats <= 0) {
+      toast.error("All spots are taken!");
     }
   }, []);
   useEffect(() => {
