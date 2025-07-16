@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FormData } from "../utils/types";
 import { ToastContainer, toast } from "react-toastify";
-import { ArrowLeft, HelpCircle,Loader } from "lucide-react";
+import { ArrowLeft, HelpCircle, Loader } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
@@ -20,7 +20,7 @@ export default function Component() {
   });
   const [isDisabled, setIsDisabled] = useState(true);
   const [error, setError] = useState("");
-  const [wait,setWait]=useState(false)
+  const [wait, setWait] = useState(false);
   useEffect(() => {
     const checkIsRegClosed = () => {
       const now = new Date();
@@ -72,15 +72,15 @@ export default function Component() {
     return rollRegex.test(roll);
   };
 
-  const validateForm = async() => {
-    setWait(true)
+  const validateForm = async () => {
+    setWait(true);
     const res = await axios.get(
-      process.env.NEXT_PUBLIC_BACKEND_URL + "/seats-left/"
+      process.env.NEXT_PUBLIC_BACKEND_URL + "/seats-left/",
     );
 
     if (res.data.seat_left <= 0) {
       toast.error("All spots are taken!");
-          setWait(false)
+      setWait(false);
     } else {
       const validEmail = isValidEmail(formData.email);
       const validRoll = isValidRollNumber(formData.roll_no);
@@ -118,11 +118,10 @@ export default function Component() {
       } else if (error instanceof Error) {
         message = error.message;
       }
-      
 
       setError(message);
-    }finally{
-      setWait(false)
+    } finally {
+      setWait(false);
     }
   };
 
@@ -344,11 +343,10 @@ export default function Component() {
       ${isDisabled || isRegTimeOver ? "opacity-100" : "opacity-0"}
     `}
               />
-              <span className="relative z-10"> {wait ? (
-    <Loader className="h-5 w-5 animate-spin" />
-  ) : (
-    'Pay'
-  )}</span>
+              <span className="relative z-10">
+                {" "}
+                {wait ? <Loader className="h-5 w-5 animate-spin" /> : "Pay"}
+              </span>
             </motion.button>
             <Link
               href="/contact"
