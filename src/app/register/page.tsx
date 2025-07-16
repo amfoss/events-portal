@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FormData } from "../utils/types";
 import { ToastContainer, toast } from "react-toastify";
-import { ArrowLeft, HelpCircle } from "lucide-react";
+import { ArrowLeft, HelpCircle,Loader } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
@@ -20,7 +20,7 @@ export default function Component() {
   });
   const [isDisabled, setIsDisabled] = useState(true);
   const [error, setError] = useState("");
-  const [currentSeats, setCurrentSeats] = useState(0);
+  const [wait,setWait]=useState(false)
   useEffect(() => {
     const checkIsRegClosed = () => {
       const now = new Date();
@@ -36,19 +36,8 @@ export default function Component() {
     if (Math.floor((targetDate.getTime() - now.getTime()) / 1000) <= 0) {
       toast.error("Registrations are currently closed");
     }
-    if (currentSeats <= 0) {
-      toast.error("All spots are taken!");
-    }
   }, []);
-  useEffect(() => {
-    const getSeats = async () => {
-      setCurrentSeats(
-        (await axios.get(process.env.NEXT_PUBLIC_BACKEND_URL + "/seats-left/"))
-          .data.seat_left,
-      );
-    };
-    getSeats();
-  }, [isDisabled]);
+
   useEffect(() => {
     setIsDisabled(
       !formData.name.trim() ||
@@ -83,17 +72,27 @@ export default function Component() {
     return rollRegex.test(roll);
   };
 
-  const validateForm = () => {
-    const validEmail = isValidEmail(formData.email);
-    const validRoll = isValidRollNumber(formData.roll_no);
-    const validPhone = isValidPhone(formData.phone_number);
-    if (formData.name !== "" && validEmail && validRoll && validPhone) {
-      sendData();
+  const validateForm = async() => {
+    setWait(true)
+    const res = await axios.get(
+      process.env.NEXT_PUBLIC_BACKEND_URL + "/seats-left/"
+    );
+
+    if (res.data.seat_left <= 0) {
+      toast.error("All spots are taken!");
+          setWait(false)
     } else {
-      if (formData.name === "") toast.warn("Please Enter Your Name.");
-      else if (!validEmail) toast.warn("Enter A Valid Email Id");
-      else if (!validRoll) toast.warn("Enter A Valid Roll Number");
-      else if (!validPhone) toast.warn("Enter A Valid Phone Number");
+      const validEmail = isValidEmail(formData.email);
+      const validRoll = isValidRollNumber(formData.roll_no);
+      const validPhone = isValidPhone(formData.phone_number);
+      if (formData.name !== "" && validEmail && validRoll && validPhone) {
+        sendData();
+      } else {
+        if (formData.name === "") toast.warn("Please Enter Your Name.");
+        else if (!validEmail) toast.warn("Enter A Valid Email Id");
+        else if (!validRoll) toast.warn("Enter A Valid Roll Number");
+        else if (!validPhone) toast.warn("Enter A Valid Phone Number");
+      }
     }
   };
 
@@ -119,8 +118,11 @@ export default function Component() {
       } else if (error instanceof Error) {
         message = error.message;
       }
+      
 
       setError(message);
+    }finally{
+      setWait(false)
     }
   };
 
@@ -324,7 +326,7 @@ export default function Component() {
             <motion.button
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.05 }}
-              disabled={isDisabled || currentSeats <= 0 || isRegTimeOver}
+              disabled={isDisabled || isRegTimeOver}
               onClick={validateForm}
               className="relative text-white font-bold py-4 px-12 rounded-lg text-xl overflow-hidden disabled:cursor-not-allowed"
             >
@@ -332,17 +334,21 @@ export default function Component() {
                 className={`
       absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 
       transition-opacity duration-500 ease-in-out
-      ${isDisabled || currentSeats <= 0 || isRegTimeOver ? "opacity-0" : "opacity-100"}
+      ${isDisabled || isRegTimeOver ? "opacity-0" : "opacity-100"}
     `}
               />
               <span
                 className={`
       absolute inset-0 bg-gradient-to-r from-gray-400 to-gray-500 
       transition-opacity duration-500 ease-in-out
-      ${isDisabled || currentSeats <= 0 || isRegTimeOver ? "opacity-100" : "opacity-0"}
+      ${isDisabled || isRegTimeOver ? "opacity-100" : "opacity-0"}
     `}
               />
-              <span className="relative z-10">Pay</span>
+              <span className="relative z-10"> {wait ? (
+    <Loader className="h-5 w-5 animate-spin" />
+  ) : (
+    'Pay'
+  )}</span>
             </motion.button>
             <Link
               href="/contact"
