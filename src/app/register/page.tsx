@@ -92,6 +92,7 @@ export default function Component() {
         else if (!validEmail) toast.warn("Enter A Valid Email Id");
         else if (!validRoll) toast.warn("Enter A Valid Roll Number");
         else if (!validPhone) toast.warn("Enter A Valid Phone Number");
+        setWait(false)
       }
     }
   };
