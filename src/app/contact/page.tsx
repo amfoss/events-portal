@@ -85,7 +85,7 @@ export default function ContactPage() {
                 <h3 className="text-white font-semibold mb-2">
                   Name
                 </h3>
-                <p className="text-gray-300 text-sm">amFoss</p>
+                <p className="text-gray-300 text-sm">amFOSS</p>
               </div>
             </div>
           </div>
