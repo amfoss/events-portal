@@ -55,7 +55,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
                 <p className="text-gray-300 text-sm mb-2">+91 9995613985</p>
-                <p className="text-gray-300 text-sm mb-2">+91 9995613985</p>
+                <p className="text-gray-300 text-sm mb-2">+91 8306644713</p>
                 <div className="flex items-center justify-center gap-1 text-xs text-gray-400">
                   <Clock className="w-3 h-3" />
                   <span>Mon-Fri, 5 PM - 12 AM</span>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                   <Scale className="w-6 h-6 text-green-400" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">
-                  Legal Entity Name
+                  Name
                 </h3>
                 <p className="text-gray-300 text-sm">amFoss</p>
               </div>
