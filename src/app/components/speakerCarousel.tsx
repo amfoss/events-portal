@@ -72,7 +72,7 @@ export default function SwiperCarousel() {
       <Swiper
         modules={[Pagination, Autoplay, Navigation]}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 8000, disableOnInteraction: false }}
         loop={true}
         speed={700}
         className="rounded-xl overflow-hidden"
