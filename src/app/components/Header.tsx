@@ -55,7 +55,7 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
             variants={pVariants}
             className="text-2xl flex md:text-4xl font-Lekton text-gray-200 drop-shadow-sm tracking-wide leading-snug"
           >
-            Starting July 28<p className="text-xl md:text-2xl">*</p>, 2025
+            Starting August 7<p className="text-xl md:text-2xl">*</p>, 2025
           </motion.p>
           <motion.p
             variants={pVariants}
