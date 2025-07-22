@@ -21,13 +21,13 @@ const speakers: Speakers[] = [
   {
     name: "Gautham Mohanraj",
     image: Gautham,
-    desc: "Gautham Mohanraj is a longtime contributor to Scribe, a Wikimedia-affiliated project that powers accessibility tools for Wikipedia. With over 220 commits, he’s been a key part of Scribe’s growth and impact. He’s currently doing the LFX Mentorship Program with Web3j, and has also been selected as an Outreachy mentor, guiding newcomers into open source.<br/><br/> A national-level hackathon winner, Gautham blends deep technical experience with a passion for mentoring",
+    desc: "Gautham Mohanraj is a longtime contributor to Scribe, a Wikimedia-affiliated project that powers accessibility tools for Wikipedia. With over 220 commits and 53 pull requests, he’s been a key part of Scribe’s growth and impact. He’s currently participating in the LFX Mentorship Program with Web3j, and has also been selected as an Outreachy mentor, guiding newcomers into open source.<br/><br/>A national-level hackathon winner, Gautham blends deep technical experience with a passion for mentoring.",
     linkedIn: "https://www.linkedin.com/in/gauthammohanraj/",
   },
   {
     name: "Swayam Agrahari",
     image: Swayam,
-    desc: "Swayam Agrahari is a passionate web developer and open-source contributor with experience in React, Next.js, Node.js, and MongoDB. He has contributed to the WikiEdu Dashboard, the tool used to manage infrastructure for programs like Outreachy and GSoC. Swayam was a winner at FOSS Hack, an open-source hackathon, and has been selected for a fully funded opportunity to attend Wikimania 2025 in Nairobi, Kenya — Wikimedia’s flagship annual conference.<br/><br/> His journey shows how student developers can turn open-source contributions into global opportunities.",
+    desc: "Swayam Agrahari is a passionate web developer and open-source contributor with experience in React, Next.js, Node.js, and MongoDB. He has contributed to the WikiEdu Dashboard, the tool used to manage infrastructure for programs like Outreachy and GSoC. Swayam was a winner at FOSS Hack, an open-source hackathon, and has been selected for a fully funded opportunity to attend Wikimania 2025 in Nairobi, Kenya - Wikimedia’s flagship annual conference.<br/><br/> His journey shows how student developers can turn open-source contributions into global opportunities.",
     linkedIn: "https://www.linkedin.com/in/swayam-agrahari-416088266/",
   },
 ];
