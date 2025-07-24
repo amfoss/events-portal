@@ -34,7 +34,8 @@ export default function Component() {
       }
       setwaitLoadPage(false);
     };
-  });
+    fetchSeats()
+  },[]);
   useEffect(() => {
     const checkIsRegClosed = () => {
       const now = new Date();
@@ -141,10 +142,10 @@ export default function Component() {
     } finally {
       setWait(false);
     }
-  };
-  {
-    !waitloadPage;
+  };  
     return (
+      <>
+      {!waitloadPage&&
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#4d0929] via-[#000000] to-[#3c1c3f] relative px-6">
         <Image
           alt="Background"
@@ -382,6 +383,6 @@ export default function Component() {
           </div>
         </motion.div>
       </div>
+}</>
     );
-  }
 }
