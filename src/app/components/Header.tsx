@@ -63,7 +63,10 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
           >
             14 Days • Offline Workshop
           </motion.p>
-          <motion.p variants={pVariants} className="text-sm text-gray-200 font-Lekton drop-shadow-2xl tracking-tight">
+          <motion.p
+            variants={pVariants}
+            className="text-sm text-gray-200 font-Lekton drop-shadow-2xl tracking-tight"
+          >
             (Dates are Tentative)
           </motion.p>
         </motion.div>
@@ -81,7 +84,11 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
         </motion.div>
 
         <motion.a
-          href="https://openworkshop.vercel.app/register"
+          href={
+            currentSeats > 0
+              ? "https://openworkshop.vercel.app/register"
+              : "/register/seats-filled"
+          }
           whileHover={{ y: -10 }}
           whileTap={{ scale: 0.8 }}
           className="bg-gradient-to-r mt-12 z-20 from-[#FF06E4] to-[#770297] text-white px-10 py-4 rounded-xl font-Lalezar text-xl sm:text-xl md:text-3xl  font-bold uppercase"

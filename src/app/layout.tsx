@@ -29,7 +29,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "amFOSS Workshop",
   description: "Your First Step Into Freedom Starts Here",
-   icons: {
+  icons: {
     icon: "/amfoss_bulb_white.svg",
   },
 };

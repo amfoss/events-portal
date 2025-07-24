@@ -17,8 +17,8 @@ export default function PaymentScreen() {
       try {
         const res = await axios.get(
           process.env.NEXT_PUBLIC_BACKEND_URL +
-          "/payment-confirmation/" +
-          localStorage.getItem("orderId"),
+            "/payment-confirmation/" +
+            localStorage.getItem("orderId"),
         );
         if (res.status === 200) {
           setIsProcessing(false);

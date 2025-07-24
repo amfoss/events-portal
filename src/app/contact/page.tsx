@@ -82,9 +82,7 @@ export default function ContactPage() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-green-500/20 rounded-full mb-4">
                   <Scale className="w-6 h-6 text-green-400" />
                 </div>
-                <h3 className="text-white font-semibold mb-2">
-                  Name
-                </h3>
+                <h3 className="text-white font-semibold mb-2">Name</h3>
                 <p className="text-gray-300 text-sm">amFOSS</p>
               </div>
             </div>
