@@ -92,7 +92,7 @@ export default function SeatsFull() {
                   transition={{ delay: 1.5 }}
                 >
                   <motion.a
-                    href="https://forms.gle/poV5Evr8fBqFWKLU8"
+                    href="https://forms.gle/PHipdcbou7Hy9fT99"
                     className="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-3 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     Fill The Form Here
