@@ -8,7 +8,7 @@ export async function middleware(req: NextRequest) {
   if(currentSeats.data.seat_left<=0 && !path.includes("/payment") && !path.includes("/seats-filled")){
     return NextResponse.redirect(path+"/seats-filled")
   }
-  if (path.includes("https://events.amfoss.in/")) {
+  if (path.includes("https://events.amfoss.in/")||path.includes("3000")) {
     return NextResponse.redirect("https://openworkshop.vercel.app/register");
   }
 }
