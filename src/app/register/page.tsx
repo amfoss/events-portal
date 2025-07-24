@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 export default function Component() {
   const [isRegTimeOver, setRegTimeOver] = useState(false);
   const targetDate = new Date("2025-07-28T00:00:00");
-  const router=useRouter()
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     email: "",
     name: "",
@@ -35,7 +35,7 @@ export default function Component() {
   useEffect(() => {
     const now = new Date();
     if (Math.floor((targetDate.getTime() - now.getTime()) / 1000) <= 0) {
-      router.push("/register/seats-filled")
+      router.push("/register/seats-filled");
       toast.error("Registrations are currently closed");
     }
   }, []);
@@ -82,7 +82,7 @@ export default function Component() {
 
     if (res.data.seat_left <= 0) {
       toast.error("All spots are taken!");
-      router.push("/register/seats-filled")
+      router.push("/register/seats-filled");
       setWait(false);
     } else {
       const validEmail = isValidEmail(formData.email);
@@ -95,7 +95,7 @@ export default function Component() {
         else if (!validEmail) toast.warn("Enter A Valid Email Id");
         else if (!validRoll) toast.warn("Enter A Valid Roll Number");
         else if (!validPhone) toast.warn("Enter A Valid Phone Number");
-        setWait(false)
+        setWait(false);
       }
     }
   };

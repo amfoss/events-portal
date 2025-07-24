@@ -64,8 +64,8 @@ export default function SeatsFull() {
                   transition={{ delay: 1.1 }}
                   className="text-gray-400 text-sm"
                 >
-                  This workshop has reached maximum capacity, but don&apos;t worry -
-                  we have more exciting workshops coming up!
+                  This workshop has reached maximum capacity, but don&apos;t
+                  worry - we have more exciting workshops coming up!
                 </motion.p>
               </div>
 
@@ -80,8 +80,9 @@ export default function SeatsFull() {
                     Want more workshops like this?
                   </h3>
                   <p className="text-gray-300 text-sm mb-4">
-                    Fill out the form below to let us know you&apos;re interested!
-                    We&apos;ll use your feedback to plan more sessions you&apos;ll love.
+                    Fill out the form below to let us know you&apos;re
+                    interested! We&apos;ll use your feedback to plan more
+                    sessions you&apos;ll love.
                   </p>
                 </div>
 

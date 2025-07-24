@@ -63,7 +63,10 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
           >
             14 Days • Offline Workshop
           </motion.p>
-          <motion.p variants={pVariants} className="text-sm text-gray-200 font-Lekton drop-shadow-2xl tracking-tight">
+          <motion.p
+            variants={pVariants}
+            className="text-sm text-gray-200 font-Lekton drop-shadow-2xl tracking-tight"
+          >
             (Dates are Tentative)
           </motion.p>
         </motion.div>
