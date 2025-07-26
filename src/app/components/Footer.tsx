@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Timer from "./Timer";
 import Image from "next/image";
 import amFoss2 from "@/public/amFOSS2.png";
@@ -8,20 +7,20 @@ import { Github, Linkedin, Instagram } from "lucide-react";
 export default function Footer() {
   return (
     <>
-      <div className="max-w-4xl mx-auto my-20 px-6 md:px-10 flex flex-col items-center">
+      <div className="max-w-5xl mx-auto my-20 px-6 md:px-10 flex flex-col items-center">
         <p className="text-2xl md:text-4xl font-bold mb-8 text-white">
-          Time Is Ticking - Secure Your Spot Now !!!
+          The countdown is on! The Workshop starts in...
         </p>
         <div className="flex flex-col items-center">
           <Timer />
-          <motion.a
+          {/* <motion.a
             href="https://openworkshop.vercel.app/register"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="mt-10 bg-gradient-to-r  from-[#FF06E4] to-[#770297] text-white px-10 py-4 rounded-full text-lg font-bold uppercase "
           >
             REGISTER NOW
-          </motion.a>
+          </motion.a> */}
         </div>
       </div>
       <div className="flex flex-col items-center">
