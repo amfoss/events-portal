@@ -51,12 +51,12 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
           animate="show"
           className="mt-10 text-white text-center px-4"
         >
-          <motion.p
+          <motion.span
             variants={pVariants}
             className="text-2xl flex md:text-4xl font-Lekton text-gray-200 drop-shadow-sm tracking-wide leading-snug"
           >
             Starting August 7<p className="text-xl md:text-2xl">*</p>, 2025
-          </motion.p>
+          </motion.span>
           <motion.p
             variants={pVariants}
             className="text-lg md:text-2xl font-Lekton text-gray-300 mt-3 drop-shadow-sm tracking-wide"
@@ -83,14 +83,16 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
           left, register today!
         </motion.div>
 
-        <motion.a
-          href="https://openworkshop.vercel.app/register"
-          whileHover={{ y: -10 }}
-          whileTap={{ scale: 0.8 }}
-          className="bg-gradient-to-r mt-12 z-20 from-[#FF06E4] to-[#770297] text-white px-10 py-4 rounded-xl font-Lalezar text-xl sm:text-xl md:text-3xl  font-bold uppercase"
-        >
-          REGISTER NOW!
-        </motion.a>
+        {currentSeats > 0 && (
+          <motion.a
+            href="https://openworkshop.vercel.app/register"
+            whileHover={{ y: -10 }}
+            whileTap={{ scale: 0.8 }}
+            className="bg-gradient-to-r mt-12 z-20 from-[#FF06E4] to-[#770297] text-white px-10 py-4 rounded-xl font-Lalezar text-xl sm:text-xl md:text-3xl  font-bold uppercase"
+          >
+            REGISTER NOW!
+          </motion.a>
+        )}
       </div>
       <div className="max-w-4xl relative mx-auto mt-40 mb-20 px-6 md:px-10">
         <div className="mb-8 z-10 w-fit">

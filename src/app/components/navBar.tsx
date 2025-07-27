@@ -92,7 +92,14 @@ export default function NavBar({ currentSeats, triggerSeats }: NavBarProps) {
   const closeSideMenu = () => setShowSideMenu(false);
 
   const navigationItems = [
-    { label: "Register", href: "https://openworkshop.vercel.app/register" },
+    ...(currentSeats > 0
+      ? [
+          {
+            label: "Register",
+            href: "https://openworkshop.vercel.app/register",
+          },
+        ]
+      : []),
     { label: "Schedule", section: "schedule" },
     { label: "Speakers", section: "speakers" },
     { label: "FAQ's", section: "faq" },

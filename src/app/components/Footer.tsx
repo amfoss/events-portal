@@ -4,7 +4,8 @@ import amFoss2 from "@/public/amFOSS2.png";
 import X from "@/public/x-social-media-black-icon.png";
 import Link from "next/link";
 import { Github, Linkedin, Instagram } from "lucide-react";
-export default function Footer() {
+import { motion } from "framer-motion";
+export default function Footer({ currentSeats }: { currentSeats: number }) {
   return (
     <>
       <div className="max-w-5xl mx-auto my-20 px-6 md:px-10 flex flex-col items-center">
@@ -13,14 +14,16 @@ export default function Footer() {
         </p>
         <div className="flex flex-col items-center">
           <Timer />
-          {/* <motion.a
-            href="https://openworkshop.vercel.app/register"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-10 bg-gradient-to-r  from-[#FF06E4] to-[#770297] text-white px-10 py-4 rounded-full text-lg font-bold uppercase "
-          >
-            REGISTER NOW
-          </motion.a> */}
+          {currentSeats > 0 && (
+            <motion.a
+              href="https://openworkshop.vercel.app/register"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-10 bg-gradient-to-r  from-[#FF06E4] to-[#770297] text-white px-10 py-4 rounded-full text-lg font-bold uppercase "
+            >
+              REGISTER NOW
+            </motion.a>
+          )}
         </div>
       </div>
       <div className="flex flex-col items-center">
