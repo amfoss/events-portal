@@ -104,7 +104,7 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
                 y: 0,
                 transition: { delay: 0.8, duration: 0.4 },
               }}
-              href="https://forms.gle/PHipdcbou7Hy9fT99"
+              href="https://forms.gle/kui5nhC91Voz4jRW7"
               className="text-neutral-500 transition-colors hover:text-white duration-300"
             >
               Missed It? Fill the Form
