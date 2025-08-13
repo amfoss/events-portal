@@ -6,6 +6,7 @@ interface headerProps {
   currentSeats: number;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function Header({ showSeats, currentSeats }: headerProps) {
   const divVariants: Variants = {
     hidden: { opacity: 0, y: 60 },
@@ -101,7 +102,6 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
             <p className="bg-gradient-to-r mt-12 mb-4 z-20 from-[#FF06E4] to-[#770297] text-white px-5 py-2 rounded-xl font-Lalezar text-lg  font-bold uppercase">
               New batch coming soon!
             </p>
-            {/*
             <motion.a
               initial={{ opacity: 0, y: 100 }}
               animate={{
@@ -112,9 +112,8 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
               href="https://forms.gle/kui5nhC91Voz4jRW7"
               className="text-neutral-500 transition-colors hover:text-white duration-300"
             >
-              Missed It? Fill the Form
+              Fill the Form to get in early!
             </motion.a>
-            */}
           </motion.div>
         )}
       </div>
