@@ -51,18 +51,21 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
           animate="show"
           className="mt-10 text-white text-center px-4"
         >
+          {/*
           <motion.span
             variants={pVariants}
             className="text-2xl flex md:text-4xl font-Lekton text-gray-200 drop-shadow-sm tracking-wide leading-snug"
           >
-            Starting August 7<p className="text-xl md:text-2xl">*</p>, 2025
+            Starting September<p className="text-xl md:text-2xl">*</p>, 2025
           </motion.span>
+          */}
           <motion.p
             variants={pVariants}
             className="text-lg md:text-2xl font-Lekton text-gray-300 mt-3 drop-shadow-sm tracking-wide"
           >
             14 Days • Offline Workshop
           </motion.p>
+          {/*
           <motion.p
             variants={pVariants}
             className="text-sm text-gray-200 font-Lekton drop-shadow-2xl tracking-tight"
@@ -81,6 +84,7 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
             {currentSeats + " seats"}
           </div>
           left, register today!
+            */}
         </motion.div>
 
         {currentSeats > 0 ? (
@@ -95,8 +99,9 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
         ) : (
           <motion.div className="z-30">
             <p className="bg-gradient-to-r mt-12 mb-4 z-20 from-[#FF06E4] to-[#770297] text-white px-5 py-2 rounded-xl font-Lalezar text-lg  font-bold uppercase">
-              This session is fully booked!
+              New batch coming soon!
             </p>
+            {/*
             <motion.a
               initial={{ opacity: 0, y: 100 }}
               animate={{
@@ -109,6 +114,7 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
             >
               Missed It? Fill the Form
             </motion.a>
+            */}
           </motion.div>
         )}
       </div>
