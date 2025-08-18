@@ -10,7 +10,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 export default function Component() {
   const [isRegTimeOver, setRegTimeOver] = useState(false);
-  const targetDate = new Date("2025-07-28T00:00:00");
+  const targetDate = new Date("2025-08-30T00:00:00");
   const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     email: "",
@@ -43,10 +43,10 @@ export default function Component() {
   useEffect(() => {
     setIsDisabled(
       !formData.name.trim() ||
-        !formData.email.trim() ||
-        !formData.roll_no.trim() ||
-        !formData.phone_number.trim() ||
-        !formData.checkBox,
+      !formData.email.trim() ||
+      !formData.roll_no.trim() ||
+      !formData.phone_number.trim() ||
+      !formData.checkBox,
     );
   }, [formData]);
 
