@@ -6,7 +6,7 @@ interface headerProps {
   currentSeats: number;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 export default function Header({ showSeats, currentSeats }: headerProps) {
   const divVariants: Variants = {
     hidden: { opacity: 0, y: 60 },
@@ -52,21 +52,18 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
           animate="show"
           className="mt-10 text-white text-center px-4"
         >
-          {/*
           <motion.span
             variants={pVariants}
             className="text-2xl flex md:text-4xl font-Lekton text-gray-200 drop-shadow-sm tracking-wide leading-snug"
           >
-            Starting September<p className="text-xl md:text-2xl">*</p>, 2025
+            Starting September 8<p className="text-xl md:text-2xl">*</p>, 2025
           </motion.span>
-          */}
           <motion.p
             variants={pVariants}
             className="text-lg md:text-2xl font-Lekton text-gray-300 mt-3 drop-shadow-sm tracking-wide"
           >
             14 Days • Offline Workshop
           </motion.p>
-          {/*
           <motion.p
             variants={pVariants}
             className="text-sm text-gray-200 font-Lekton drop-shadow-2xl tracking-tight"
@@ -85,7 +82,6 @@ export default function Header({ showSeats, currentSeats }: headerProps) {
             {currentSeats + " seats"}
           </div>
           left, register today!
-            */}
         </motion.div>
 
         {currentSeats > 0 ? (
