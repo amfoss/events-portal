@@ -54,7 +54,7 @@ export default function ContactPage() {
                   <Phone className="w-6 h-6 text-purple-400" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
-                <p className="text-gray-300 text-sm mb-2">+91 9995613985</p>
+                <p className="text-gray-300 text-sm mb-2">+91 8281826051</p>
                 <p className="text-gray-300 text-sm mb-2">+91 8306644713</p>
                 <div className="flex items-center justify-center gap-1 text-xs text-gray-400">
                   <Clock className="w-3 h-3" />
