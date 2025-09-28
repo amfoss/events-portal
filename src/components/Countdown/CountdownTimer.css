@@ -9,10 +9,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #1b1b1b;
-  border-radius: 48px;
+  background-color: rgb(from rgb(28, 28, 63) r g b / 0.15);
+  backdrop-filter: blur(10px);
+  /* background-color: #1b1b1b; */
+  /* border-radius: 48px; */
+  /* border: 1px solid var(--border-color); */
   /* box-shadow: 0 20px 50px rgba(0, 255, 0, 0.2);  */
-  box-shadow: 0px 10px 4px 0px #3C9D2140;
+  /* box-shadow: 0px 10px 4px 0px #3C9D2140; */
+  box-shadow: var(--border-color);
   width: 100%;
   padding: 20px;
 

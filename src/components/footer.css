@@ -13,15 +13,15 @@
 * Created with https://www.css-gradient.com
 * Gradient link: https://www.css-gradient.com/?c1=1c1c1c&c2=2c592c&gt=l&gd=dtt
 */
-  background: #1C1C1C;
-  background: linear-gradient(180deg, #1C1C1C, #2C592C);
+  /* background: #1C1C1C; */
+  background: linear-gradient(180deg, var(--hacktober-dark) 30%, #403F7D 100%);
 }
 
 
 .footer h3 {
   color: var(--Theme-Text, #FEFDF8);
-  text-shadow: 0px 8px 4px rgba(255, 139, 255, 0.25);
-  font-family: "Space Grotesk";
+  text-shadow: rgb(from rgb(208, 204, 227) r g b / 0.5) 0px 0px 10px;
+  font-family: "AtkinsonHyperlegible";
   font-size: 5vh;
   font-style: normal;
   font-weight: 700;
@@ -30,7 +30,7 @@
 
 .footercontents p {
   color: #FFF;
-  font-family: "Space Grotesk";
+  font-family: "AtkinsonHyperlegible";
   font-size: 3.5vh;
   font-style: normal;
   font-weight: 500;

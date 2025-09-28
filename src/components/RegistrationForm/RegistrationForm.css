@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #4fb709;
-  --secondary-color: #ff66cc;
+  --primary-color: #A0A0FF;
+  --secondary-color: #A0A0FF;
   --background-color: #0f0f0f;
   --text-color: #ffffff;
   --input-bg-color: rgba(255, 255, 255, 0.1);
@@ -13,7 +13,7 @@
 /* body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "AtkinsonHyperlegible", sans-serif;
   font-optical-sizing: auto;
   margin: 0;
   padding: 0;
@@ -27,15 +27,17 @@
   width: 100%;
   max-width: 500px;
   padding: 40px 30px;
-  background-color: var(--form-bg-color);
+  /* background-color: var(--form-bg-color); */
+  border: 4px dotted #5E577C;
   border-radius: 20px;
-  box-shadow: 1px 1px 25px var(--shadow-color);
+  /* box-shadow: 1px 1px 25px var(--shadow-color); */
   height: auto;
 }
 
 .form-title {
   font-size: 2.5rem;
-  color: var(--secondary-color);
+  color: var(--Theme-Text);
+  text-shadow: rgb(from rgb(208, 204, 227) r g b / 0.5) 0px 0px 10px;
   margin: 0 0 10px;
   text-align: left;
 }
@@ -55,9 +57,10 @@
 }
 
 .form-input {
-  padding: 15px;
-  border: 2px solid var(--input-border-color);
-  border-radius: 10px;
+  padding: 12px;
+  /* border: 2px solid var(--input-border-color); */
+  /* border-radius: 10px; */
+  border: 0px;
   background-color: var(--input-bg-color);
   color: var(--text-color);
   outline: none;
@@ -65,6 +68,7 @@
   font-optical-sizing: auto;
   font-size: 1rem;
   transition: border-color 0.3s ease;
+  box-shadow: var(--border-color);
 }
 
 .form-input::placeholder {
@@ -76,16 +80,17 @@
 }
 
 .submit-button {
-  background-color: #000000;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  border-radius: 30px;
+  background-color: var(--hacktober-dark);
+  color: #F2F4F7;
+  border: 0px;
+  /* border-radius: 30px; */
   padding: 12px 30px;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  font-family: inherit;
+  box-shadow: var(--border-color);
+  font-family: "AtkinsonHyperlegibleMono", monospace;
+  font-weight: bold;
   align-self: center;
   width: 100%;
   max-width: 200px;
@@ -93,8 +98,9 @@
 }
 
 .submit-button:hover {
-  background-color: var(--primary-color);
-  color: var(--text-color);
+  background: var(--button-hover-color);
+  box-shadow: none;
+  color: #F2F4F7;
 }
 
 .info-icon {
@@ -102,20 +108,20 @@
   font-size: 0.950rem !important;
   width: 20px;
   height: 20px;
-  background-color: #007bff; 
+  background-color: var(--secondary-color);
   color: white;
   border-radius: 50%;
   text-align: center;
   line-height: 20px;
   font-weight: bold;
   margin-right: 10px;
-  font-family: Arial, sans-serif;
+  font-family: "AtkinsonHyperlegible", sans-serif;
 }
 
 .note {
   margin-top: 20px;
   margin-bottom: 60px;
-  color: #007bff;
+  color: var(--secondary-color);
   font-weight: 600;
   text-align: left;
   border-radius: 4px;
@@ -135,13 +141,15 @@
 }
 
 .gender-field {
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  border: 0px;
   font-family: inherit;
   color: var(--input-placeholder-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 1rem;
+  /* box-shadow: var(--border-color); */
 }
 
 .gender-label {
@@ -153,9 +161,11 @@
 
 .gender-select {
   width: 100%;
-  padding: 15px;
-  border: 2px solid var(--input-border-color);
-  border-radius: 10px;
+  padding: 12px;
+  border: 0px;
+  /* border: 2px solid var(--input-border-color); */
+  /* border-radius: 10px; */
+  box-shadow: var(--border-color);
   background-color: var(--input-bg-color);
   color: var(--input-placeholder-color);
   font-size: 1rem;
@@ -306,4 +316,6 @@ option{
   color: #a0a0a0;  
   cursor: not-allowed; 
   border: 1px solid #b0b0b0;
+  font-family: "AtkinsonHyperlegibleMono", monospace;
+  font-weight: bold;
 }

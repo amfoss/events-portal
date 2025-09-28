@@ -7,7 +7,8 @@ function Footer() {
       <div className="footercontents">
         <h3>Support Open Source With</h3>
         <div className="foss-logo">
-          <img src={`${process.env.PUBLIC_URL}/assets/amfoss_logo.png`} alt="amfoss logo" className="logo" />
+          {/* <img src={`${process.env.PUBLIC_URL}/assets/amfoss_logo.png`} alt="amfoss logo" className="logo" /> */}
+          <img src="assets/amfoss_logo.png" alt="amfoss logo" className="logo" />
         </div>
         <p>We'll see you there!</p>
         <div className="foot-icon">

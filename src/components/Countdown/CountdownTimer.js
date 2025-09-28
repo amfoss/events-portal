@@ -3,7 +3,7 @@ import "./CountdownTimer.css";
 
 const CountdownTimer = () => {
   const calculateTimeLeft = () => {
-    const targetDate =new Date("2024-10-22T23:59:59"); 
+    const targetDate =new Date("2025-10-22T23:59:59"); 
     const now = new Date();
     const difference = targetDate - now;
 
@@ -31,7 +31,7 @@ const CountdownTimer = () => {
   }, [timeLeft]);
 
   return (
-    <div className="countdown-container ">
+    <div className="countdown-container">
       <div className="countdown-timer">
         <div className="time-section">
           <span className="time-value">{timeLeft.days || "00"}</span>
