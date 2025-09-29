@@ -25,7 +25,7 @@ function Header() {
                 <div className="box">
                 </div>
                 <div className="left-content">
-                    <img src={`${process.env.PUBLIC_URL}/assets/03_Logos/Color/Light/svg/HF-Horizontal-Color-Light.svg`} alt="hacktoberfest logo" className="mainLogo" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/HF-Horizontal-Color-Light.svg`} alt="hacktoberfest logo" className="mainLogo" />
                     <p className="subtext"> It's that time of year again.<br />HacktoberFest is nearly upon us!</p>
                     <button className="register-btn" onClick={scrollToRegistration}>REGISTER NOW</button>
                 </div>
