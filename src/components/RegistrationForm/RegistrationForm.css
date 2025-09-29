@@ -27,10 +27,9 @@
   width: 100%;
   max-width: 500px;
   padding: 40px 30px;
-  /* background-color: var(--form-bg-color); */
+  background-color: #1c1c3f;
   border: 4px dotted #5E577C;
   border-radius: 20px;
-  /* box-shadow: 1px 1px 25px var(--shadow-color); */
   height: auto;
 }
 
@@ -266,7 +265,7 @@ option{
 @media (min-width: 1024px) {
   .form-container {
     margin-top: 50px;
-    max-width: 40vw;
+    /* max-width: 40vw; */
     padding: 80px;
   }
 
@@ -295,6 +294,14 @@ option{
     font-size: 1.25rem;
   }
 }
+
+@media (min-width: 725px) {
+  .form-container {
+    border-radius: 20px;
+    max-width: 500px;
+  }
+}
+
 
 .limit-reached {
   color: red;

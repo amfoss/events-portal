@@ -85,16 +85,18 @@
     font-size: 2rem;
     font-style: normal;
     font-weight: normal;
-    margin-bottom: 10px;
-    padding: 100px;
+    margin-bottom: 100px;
+    padding: 50px;
     line-height: 1.5;
     color: var(--Theme-Primary, #50DA4C);
     text-align: justify;
+    background: linear-gradient(180deg, transparent, #403F7D 500%);
+    box-shadow: var(--border-color);
+    border-radius: 10px;
 }
 sup{
     text-transform: lowercase;
 }
-
 
 .date {
     color: var(--Theme-Text, #FEFDF8);
@@ -210,7 +212,7 @@ sup{
         gap: 2vh;
 
 
-        margin-bottom: 50px;
+        margin-bottom: 150px;
         min-height: 60vh;
 
     }

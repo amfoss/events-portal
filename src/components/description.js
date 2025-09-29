@@ -15,7 +15,7 @@ function Description() {
         <p className="paragraph">
           <strong>Hacktoberfest</strong> is an annual event hosted by
           <a href="https://www.digitalocean.com/" target="_blank" rel="noopener noreferrer"> DigitalOcean</a> and
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer"> GitHub</a> promoting and supporting Open Source collaboration. It’s all about encouraging meaningful contributions to open source.
+          <span> </span><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a> promoting and supporting Open Source collaboration. It’s all about encouraging meaningful contributions to open source.
         </p>
         <p className="paragraph">
           Join the Amritapuri Hacktoberfest hosted by <a href="https://amfoss.in" target="_blank" rel="noopener noreferrer">amFOSS</a>. Don’t miss this exciting opportunity to collaborate, code, and celebrate open source!
