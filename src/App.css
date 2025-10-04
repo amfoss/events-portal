@@ -1,0 +1,106 @@
+/* Atkinson Hyperlegible Regular */
+@font-face {
+  font-family: "AtkinsonHyperlegible";
+  src: url("/public/assets/fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Atkinson Hyperlegible Italic */
+@font-face {
+  font-family: "AtkinsonHyperlegible";
+  src: url("/public/assets/fonts/AtkinsonHyperlegible-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Atkinson Hyperlegible Bold */
+@font-face {
+  font-family: "AtkinsonHyperlegible";
+  src: url("/public/assets/fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Atkinson Hyperlegible Bold Italic */
+@font-face {
+  font-family: "AtkinsonHyperlegible";
+  src: url("/public/assets/fonts/AtkinsonHyperlegible-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Atkinson Hyperlegible Mono */
+@font-face {
+  font-family: "AtkinsonHyperlegibleMono";
+  src: url("/public/assets/fonts/AtkinsonHyperlegibleMono-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Atkinson Hyperlegible Mono Italic */
+@font-face {
+  font-family: "AtkinsonHyperlegibleMono";
+  src: url("/public/assets/fonts/AtkinsonHyperlegibleMono-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+/* Atkinson Hyperlegible Next */
+@font-face {
+  font-family: "AtkinsonHyperlegibleNext";
+  src: url("/public/assets/fonts/AtkinsonHyperlegibleNext-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Atkinson Hyperlegible Next Italic */
+@font-face {
+  font-family: "AtkinsonHyperlegibleNext";
+  src: url("/public/assets/fonts/AtkinsonHyperlegibleNext-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+:root {
+  --primary-color: #1C1C3F;
+  --hacktober-dark: #1C1C3F;
+  --Theme-Primary: #D0CCE3;
+  --button-hover-color: linear-gradient(90deg, #5A5AB5 0%, #C2C2FF 100%);
+  --border-color: color(srgb 0.815686 0.8 0.890196 / 0.25) 0px 0px 0px 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "AtkinsonHyperlegible", sans-serif;
+  font-optical-sizing: auto;
+  background: var(--hacktober-dark);
+  color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* .scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+} */
