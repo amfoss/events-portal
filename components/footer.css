@@ -1,0 +1,95 @@
+.footer {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=1c1c1c&c2=193319&gt=l&gd=dtt
+*/
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=1c1c1c&c2=2c592c&gt=l&gd=dtt
+*/
+  /* background: #1C1C1C; */
+  background: linear-gradient(180deg, var(--hacktober-dark) 30%, #403F7D 100%);
+}
+
+.footer svg {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+
+.footer h3 {
+  color: var(--Theme-Text, #FEFDF8);
+  text-shadow: rgb(from rgb(208, 204, 227) r g b / 0.5) 0px 0px 10px;
+  font-family: "AtkinsonHyperlegible";
+  font-size: 5vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.footercontents p {
+  color: #FFF;
+  font-family: "AtkinsonHyperlegible";
+  font-size: 3.5vh;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.foot-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot-icon img {
+  width: 3vw;
+  /* Responsive width */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+
+.foot-icon a {
+  text-decoration: none;
+}
+
+.foss-logo img {
+  width: 50vw;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .foot-icon img {
+    width: 30px;
+    /* Responsive width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin: 0 10px;
+    cursor: pointer;
+
+  }
+
+}
+
+@media (min-width: 480px) {
+  .foot-icon img {
+    width: 40px;
+    /* Responsive width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin: 0 10px;
+    cursor: pointer;
+
+  }
+
+}

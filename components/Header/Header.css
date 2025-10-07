@@ -1,0 +1,309 @@
+.header {
+    width: 100%;
+    color: white;
+    padding: 0px 0px;
+    text-align: center;
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-optical-sizing: auto;
+    position: relative;
+    background: 
+        linear-gradient(to top, var(--hacktober-dark) 0%, transparent 100%),
+        url('/public/assets/bg-header.svg');
+            background-size: cover;
+            background-position: center;
+
+    min-height: 100vh;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+
+}
+
+.logo {
+    min-width: 200px;
+    height: auto;
+}
+
+.header-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 0 50px;
+
+
+}
+
+.left-content {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.right-content {
+    position: relative;
+}
+
+.mainLogo {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-shadow: rgb(from rgb(208, 204, 227) r g b / 0.5) 0px 0px 10px;
+}
+
+.subtext {
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #E0E0E0;
+    font-weight: bolder;
+    text-shadow: rgb(from rgb(208, 204, 227) r g b / 0.5) 0px 0px 10px;
+}
+
+.register-btn {
+    background-color: var(--hacktober-dark);
+    /* color: var(--primary-color); */
+    /* border: 2px solid var(--primary-color); */
+    /* border-radius: 54px; */
+    color: #F2F4F7;
+    padding: 10px 30px;
+    cursor: pointer;
+    /* transition: all 0.3s ease; */
+    border: 0px;
+    margin-top: 10px;
+    box-shadow: var(--border-color);
+    font: bold 14px "AtkinsonHyperlegibleMono", monospace !important;
+}
+
+.register-btn:hover {
+    /* background-color: var(--primary-color); */
+    /* color: black; */
+    background: var(--button-hover-color);
+    box-shadow: none;
+}
+
+/* For small devices (max-width: 600px) */
+@media (max-width: 480px) {
+    .header {
+        min-height: 100vh;
+    }
+
+    .header-top {
+
+
+        padding: 20px 0px;
+
+
+    }
+
+    .header-main {
+        padding: 0 20px;
+    }
+
+    .logo {
+        max-width: 150px;
+
+        width: 200px;
+        min-width: 0;
+    }
+
+    .mainLogo {
+        max-width: 250px;
+    }
+
+    .subtext {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .register-btn {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+}
+
+/* @media (max-width:720px) {
+    .header {
+        min-height: 90vh;
+    }
+
+    .header-top {
+
+
+        padding: 20px 0px;
+
+
+    }
+
+    .header-main {
+        padding: 0 20px;
+    }
+
+    .logo {
+        max-width: 150px;
+
+        width: 200px;
+        min-width: 0;
+    }
+
+    .mainLogo {
+        max-width: 250px;
+    }
+
+    .subtext {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .register-btn {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+} */
+
+@media (max-width: 720px) {
+    .header-top {
+        justify-content: space-evenly;
+        padding: 10px 0px;
+    }
+
+    .header-main {
+        padding: 0px 0px;
+
+    }
+
+    .logo {
+        max-width: 160px;
+    }
+
+    .mainLogo {
+        max-width: 250px;
+    }
+
+    .subtext {
+        font-size: 18px;
+    }
+
+    .register-btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+
+}
+
+@media (min-width: 720px) {
+    .header-top {
+        justify-content: space-evenly;
+        padding: 10px 0px;
+    }
+
+    .logo {
+        max-width: 180px;
+    }
+
+    .header-main {
+        padding: 0 10px;
+
+    }
+
+    .mainLogo {
+        max-width: 400px;
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    .header-top {
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    .logo {
+        max-width: 180px;
+    }
+
+    .header-main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+    }
+
+    .mainLogo {
+        max-width: 400px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .header-top {
+        justify-content: space-between;
+        padding: 10px 100px;
+    }
+
+    .logo {
+        max-width: 250px;
+    }
+
+    .header-main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 80px;
+    }
+
+
+    .mainLogo {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .header-top {
+        padding: 10px 150px;
+    }
+
+    .header-main {
+        padding: 20px 150px;
+        margin-bottom: 30vh;
+
+    }
+
+    .mainLogo {
+        min-width: 600px;
+    }
+
+    .left-content {
+        margin-left: -200px;
+
+    }
+
+    .subtext {
+        font-size: 30px;
+        font-weight: bolder;
+        display: flex;
+        align-self: start;
+    }
+
+    .register-btn {
+        font-size: 20px;
+        padding: 14px 50px;
+        margin-top: 20px;
+        margin-left: -200px;
+    }
+}
