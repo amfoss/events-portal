@@ -17,6 +17,12 @@
   background: linear-gradient(180deg, var(--hacktober-dark) 30%, #403F7D 100%);
 }
 
+.footer svg {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 
 .footer h3 {
   color: var(--Theme-Text, #FEFDF8);
