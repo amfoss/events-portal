@@ -9,6 +9,7 @@ on:
     push:
         branches-ignore:
             - main
+            - hacktoberfest-25
 
 jobs:
 
