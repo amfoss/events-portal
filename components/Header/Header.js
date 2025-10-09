@@ -16,6 +16,12 @@ function Header() {
         }
     };
 
+    const scrollToItinerary = () => {
+        const itinerarySection = document.getElementById("event-schedule");
+        if (itinerarySection) {
+            itinerarySection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
 
     return (
@@ -50,8 +56,10 @@ function Header() {
                                 <span className="edition-text">2025</span>
                             </div>
                         </div>
-
-                        <button className="register-btn" onClick={scrollToRegistration}>REGISTER NOW</button>
+                        <div className="button-group">
+                            <button onClick={scrollToRegistration}>REGISTER NOW</button>
+                            <button onClick={scrollToItinerary}>SEE ITINERARY<Image src="/assets/caret.svg" alt=""width={16} height={16} /></button>
+                        </div>
                     </div>
                     
                     <Countdown eventDate={eventDate} />
