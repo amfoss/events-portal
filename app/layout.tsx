@@ -2,8 +2,17 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hacktoberfest Event Portal",
+  title: "Hacktoberfest 2025 Portal",
   description: "Join us for Hacktoberfest!",
+  icons: {
+    icon: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/logo192.png',
+  },
 };
 
 export default function RootLayout({

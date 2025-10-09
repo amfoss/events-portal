@@ -79,7 +79,6 @@ body {
   padding: 0;
   font-family: "AtkinsonHyperlegible", sans-serif;
   font-optical-sizing: auto;
-  background: var(--hacktober-dark);
   color: white;
   scroll-behavior: smooth;
   overflow-x: hidden;
