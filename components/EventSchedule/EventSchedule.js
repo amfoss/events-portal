@@ -108,7 +108,7 @@ const EventSchedule = () => {
       <div className="schedule-container">
         <h2 className="schedule-title">Event Schedule</h2>
         <p className="schedule-description">
-          Here's the complete schedule for the event. Stay tuned for updates!
+          Here&apos;s the complete schedule for the event. Stay tuned for updates!
         </p>
         
         <div className="table-wrapper">
