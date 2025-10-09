@@ -6,6 +6,7 @@ import Header from '@/components/Header/Header';
 import Description from '@/components/description';
 import HeroStats from '@/components/HeroStats/HeroStats';
 import RegistrationForm from '@/components/RegistrationForm/RegistrationForm';
+import EventSchedule from '@/components/EventSchedule/EventSchedule';
 import ParticleBackground from '@/components/ParticleBackground/ParticleBackground';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Description />
       <HeroStats />
       <RegistrationForm />
+      <EventSchedule />
       <Footer />
     </div>
   );

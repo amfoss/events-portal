@@ -17,7 +17,7 @@ const RegistrationForm = () => {
   const [limitReached, setLimitReached] = useState(false);
   const registrationLimit = 255;
 
-  const sheetBestEndpoint = "https://api.sheetbest.com/sheets/d77801e8-e78d-423d-85df-04e05caac0a8";
+  const sheetBestEndpoint = process.env.NEXT_PUBLIC_SHEETBEST_ENDPOINT;
 
 
   const [submittedEmails, setSubmittedEmails] = useState([]);
@@ -64,7 +64,8 @@ const RegistrationForm = () => {
       return false;
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const rollNumberRegex = /^am\.[a-z]{2}\.[a-z0-9]{10}$/i;
+    // const rollNumberRegex = /^am\.[a-z]{2}\.[a-z0-9]{10}$/i;
+    const rollNumberRegex = /^am\.[a-z]{2}\.u4[a-z]{3}\d{6}$/i;
     if (!emailRegex.test(email)) {
       toast.error('Please enter a valid email address.');
       return false;
