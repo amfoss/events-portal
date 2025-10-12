@@ -5,7 +5,7 @@ import "./CountdownTimer.css";
 
 const CountdownTimer = () => {
   const calculateTimeLeft = () => {
-    const targetDate =new Date("2025-10-13T23:59:59"); 
+    const targetDate =new Date("2025-10-15T23:59:59"); 
     const now = new Date();
     const difference = targetDate - now;
 

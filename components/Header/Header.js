@@ -7,7 +7,7 @@ import Countdown from "../Countdown/CountdownTimer";
 
 
 function Header() {
-    const eventDate = "2024-10-21";
+    const eventDate = "2025-10-15";
 
     const scrollToRegistration = () => {
         const registrationSection = document.getElementById("registration");
