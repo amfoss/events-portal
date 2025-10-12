@@ -11,7 +11,7 @@ const EventSchedule = () => {
       startTime: '9:00',
       endTime: '9:30',
       duration: '30',
-      speakers: 'TBD'
+      speakers: 'Malavika M'
     },
     {
       sNo: 2,
@@ -19,7 +19,7 @@ const EventSchedule = () => {
       startTime: '9:30',
       endTime: 'TBD',
       duration: 'TBD',
-      speakers: 'TBD'
+      speakers: 'Hridesh MG'
     },
     {
       sNo: 3,
@@ -27,7 +27,7 @@ const EventSchedule = () => {
       startTime: 'TBD',
       endTime: 'TBD',
       duration: 'TBD',
-      speakers: 'TBD'
+      speakers: 'Anandajith S'
     },
     {
       sNo: 4,
@@ -59,7 +59,7 @@ const EventSchedule = () => {
       startTime: 'TBD',
       endTime: 'TBD',
       duration: 'TBD',
-      speakers: 'TBD'
+      speakers: 'Rohith'
     },
     {
       sNo: 8,
@@ -67,7 +67,7 @@ const EventSchedule = () => {
       startTime: 'TBD',
       endTime: 'TBD',
       duration: 'TBD',
-      speakers: 'TBD'
+      speakers: 'John Yohan'
     },
     {
       sNo: 9,
@@ -75,7 +75,7 @@ const EventSchedule = () => {
       startTime: 'TBD',
       endTime: 'TBD',
       duration: 'TBD',
-      speakers: 'TBD'
+      speakers: 'Jagadeesh Kota'
     },
     {
       sNo: 10,
@@ -83,7 +83,7 @@ const EventSchedule = () => {
       startTime: 'TBD',
       endTime: 'TBD',
       duration: 'TBD',
-      speakers: 'TBD'
+      speakers: 'Teja Sai Charan'
     },
     {
       sNo: 11,
@@ -91,7 +91,7 @@ const EventSchedule = () => {
       startTime: 'TBD',
       endTime: 'TBD',
       duration: 'TBD',
-      speakers: 'TBD'
+      speakers: 'Nishitha'
     },
     {
       sNo: 12,
