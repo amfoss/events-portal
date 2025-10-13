@@ -10,7 +10,7 @@ const EventSchedule = () => {
       event: 'Inauguration Ceremony',
       startTime: '9:30',
       endTime: '10:00',
-      duration: '30',
+      duration: '30 Min',
       speakers: 'Malavika M'
     },
     {
@@ -18,7 +18,7 @@ const EventSchedule = () => {
       event: 'Intro To Open Source',
       startTime: '10:30',
       endTime: '11:00',
-      duration: '30',
+      duration: '30 Min',
       speakers: 'Hridesh MG'
     },
     {
@@ -26,7 +26,7 @@ const EventSchedule = () => {
       event: 'Guest Speaker',
       startTime: '11:00',
       endTime: '12:00',
-      duration: '60',
+      duration: '60 Min',
       speakers: 'Andrew Tavis Mcallister'
     },
     {
@@ -34,7 +34,7 @@ const EventSchedule = () => {
       event: 'Dividing Into Factions',
       startTime: '12:00',
       endTime: '12:20',
-      duration: '20',
+      duration: '20 Min',
       speakers: 'Malavika'
     },
     {
@@ -50,7 +50,7 @@ const EventSchedule = () => {
       event: 'Intro To Git & GitHub And Committing First Pr',
       startTime: '1:20',
       endTime: '3:00',
-      duration: '90',
+      duration: '90 Min',
       speakers: 'Rohith & Gautham'
     },
     {
@@ -58,7 +58,7 @@ const EventSchedule = () => {
       event: 'First Pr & Community Wall',
       startTime: '3:15',
       endTime: '3:45',
-      duration: '30',
+      duration: '30 Min',
       speakers: 'Anandajith S'
     },
     {
@@ -66,7 +66,7 @@ const EventSchedule = () => {
       event: 'am/Place',
       startTime: '3:45',
       endTime: '5:00',
-      duration: '75',
+      duration: '75 Min',
       speakers: 'Naveen'
     },
     {
@@ -74,7 +74,7 @@ const EventSchedule = () => {
       event: 'Faction Game',
       startTime: '5:30',
       endTime: '6:30',
-      duration: '90',
+      duration: '90 Min',
       speakers: 'Teja Sai Charan'
     },
     {
@@ -82,7 +82,7 @@ const EventSchedule = () => {
       event: 'Intro To Hack Week',
       startTime: '6:30',
       endTime: '6:50',
-      duration: '20',
+      duration: '20 Min',
       speakers: 'Nishitha'
     },
     {
@@ -90,7 +90,7 @@ const EventSchedule = () => {
       event: 'Closing Ceremony',
       startTime: '6:50',
       endTime: '7:00',
-      duration: '20',
+      duration: '20 Min',
       speakers: 'Malavika'
     }
   ];
