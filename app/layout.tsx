@@ -7,11 +7,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/favicon.svg',
-        type: 'image/svg+xml',
+        url: "/amfoss_bulb_white.svg",
+        type: "image/svg+xml",
       },
+      { url: "/favicon.ico", sizes: "any" },
     ],
-    apple: '/logo192.png',
+    apple: "/logo192.png",
   },
 };
 
@@ -22,9 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
