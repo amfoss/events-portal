@@ -8,45 +8,37 @@ const EventSchedule = () => {
     {
       sNo: 1,
       event: 'Inauguration Ceremony',
-      startTime: '9:00',
-      endTime: '9:30',
+      startTime: '9:30',
+      endTime: '10:00',
       duration: '30',
       speakers: 'Malavika M'
     },
     {
       sNo: 2,
       event: 'Intro To Open Source',
-      startTime: '9:30',
-      endTime: 'TBD',
-      duration: 'TBD',
+      startTime: '10:30',
+      endTime: '11:00',
+      duration: '30',
       speakers: 'Hridesh MG'
     },
     {
       sNo: 3,
-      event: 'Intro To Git & GitHub And Committing First Pr',
-      startTime: 'TBD',
-      endTime: 'TBD',
-      duration: 'TBD',
-      speakers: 'Anandajith S'
+      event: 'Guest Speaker',
+      startTime: '11:00',
+      endTime: '12:00',
+      duration: '60',
+      speakers: 'Andrew Tavis Mcallister'
     },
     {
       sNo: 4,
-      event: 'Guest Speaker',
-      startTime: 'TBD',
-      endTime: 'TBD',
-      duration: 'TBD',
-      speakers: 'TBD'
+      event: 'Dividing Into Factions',
+      startTime: '12:00',
+      endTime: '12:20',
+      duration: '20',
+      speakers: 'Malavika'
     },
     {
       sNo: 5,
-      event: 'Dividing Into Factions',
-      startTime: 'TBD',
-      endTime: 'TBD',
-      duration: 'TBD',
-      speakers: 'TBD'
-    },
-    {
-      sNo: 6,
       event: 'Lunch',
       startTime: '12:30',
       endTime: '1:20',
@@ -54,52 +46,52 @@ const EventSchedule = () => {
       speakers: ''
     },
     {
+      sNo: 6,
+      event: 'Intro To Git & GitHub And Committing First Pr',
+      startTime: '1:20',
+      endTime: '3:00',
+      duration: '90',
+      speakers: 'Rohith & Gautham'
+    },
+    {
       sNo: 7,
       event: 'First Pr & Community Wall',
-      startTime: 'TBD',
-      endTime: 'TBD',
-      duration: 'TBD',
-      speakers: 'Rohith'
+      startTime: '3:15',
+      endTime: '3:45',
+      duration: '30',
+      speakers: 'Anandajith S'
     },
     {
       sNo: 8,
       event: 'am/Place',
-      startTime: 'TBD',
-      endTime: 'TBD',
-      duration: 'TBD',
-      speakers: 'John Yohan'
+      startTime: '3:45',
+      endTime: '5:00',
+      duration: '75',
+      speakers: 'Naveen'
     },
     {
       sNo: 9,
-      event: 'Terminal Task',
-      startTime: 'TBD',
-      endTime: 'TBD',
-      duration: 'TBD',
-      speakers: 'Jagadeesh Kota'
-    },
-    {
-      sNo: 10,
       event: 'Faction Game',
-      startTime: 'TBD',
-      endTime: 'TBD',
-      duration: 'TBD',
+      startTime: '5:30',
+      endTime: '6:30',
+      duration: '90',
       speakers: 'Teja Sai Charan'
     },
     {
-      sNo: 11,
+      sNo: 10,
       event: 'Intro To Hack Week',
-      startTime: 'TBD',
-      endTime: 'TBD',
-      duration: 'TBD',
+      startTime: '6:30',
+      endTime: '6:50',
+      duration: '20',
       speakers: 'Nishitha'
     },
     {
-      sNo: 12,
+      sNo: 11,
       event: 'Closing Ceremony',
-      startTime: 'TBD',
-      endTime: 'TBD',
-      duration: 'TBD',
-      speakers: 'TBD'
+      startTime: '6:50',
+      endTime: '7:00',
+      duration: '20',
+      speakers: 'Malavika'
     }
   ];
 
