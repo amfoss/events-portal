@@ -6,6 +6,8 @@
         url('/assets/bg-header.svg');
     background-size: cover;
     background-position: center;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .header {
@@ -17,6 +19,9 @@
     color: white;
     text-align: center;
     font-family: "AtkinsonHyperlegible", sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 
@@ -191,7 +196,7 @@
 }
 
 .logo {
-    min-width: 180px;
+    width: clamp(130px, 35vw, 180px);
     height: auto;
 }
 
@@ -212,7 +217,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     text-align: left;
     margin-bottom: 20px;
     min-width: 300px;
@@ -395,16 +400,6 @@ h1 {
 
     .slide-track span {
         font-size: 1rem;
-    }
-
-    .header-top {
-        width: 100%;
-        justify-content: space-between;
-        border: none;
-        box-shadow: none;
-        background: none;
-        padding: 0;
-        margin: 0;
     }
 
     .mainLogo {

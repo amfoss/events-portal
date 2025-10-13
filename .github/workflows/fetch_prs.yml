@@ -1,0 +1,49 @@
+name: Fetch PR Data
+
+on:
+  schedule:
+    - cron: '*/2 * * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch_pr_data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Fetch PR data
+        run: |
+          mkdir -p content
+          curl -s "https://api.github.com/repos/Iron-56/First-issue-test/pulls?state=all" | \
+          jq '[.[] | {
+            id: .id,
+            number: .number,
+            title: .title,
+            state: .state,
+            user: {
+              login: .user.login,
+              avatar_url: .user.avatar_url
+            },
+            created_at: .created_at,
+            merged_at: .merged_at,
+            body: .body,
+            labels: [.labels[] | {name: .name}],
+            html_url: .html_url
+          }]' > content/pr_data.json
+          echo "Saved PR data to content/pr_data.json"
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add content/pr_data.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update PR data"
+          git push
+      
+      - name: Upload PR data as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-data
+          path: content/
+          retention-days: 7
