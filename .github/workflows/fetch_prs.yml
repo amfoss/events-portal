@@ -5,6 +5,9 @@ on:
     - cron: '*/2 * * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   fetch_pr_data:
     runs-on: ubuntu-latest
@@ -40,6 +43,7 @@ jobs:
           git add content/pr_data.json
           git diff --quiet && git diff --staged --quiet || git commit -m "Update PR data"
           git push
+          cat content/pr_data.json
       
       - name: Upload PR data as artifact
         uses: actions/upload-artifact@v4
