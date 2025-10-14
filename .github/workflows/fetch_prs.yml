@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   fetch_pr_data:
@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Fetch PR data
         run: |
           mkdir -p content
@@ -31,20 +31,28 @@ jobs:
             created_at: .created_at,
             merged_at: .merged_at,
             body: .body,
-            labels: [.labels[] | {name: .name}],
+            labels: (.labels | map({name})),
             html_url: .html_url
           }]' > content/pr_data.json
-          echo "Saved PR data to content/pr_data.json"
-      
-      - name: Commit and push changes
+          
+          echo "✅ Saved PR data to content/pr_data.json"
+          cat content/pr_data.json
+
+      - name: Commit and push changes using PAT
+        env:
+          TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          
           git add content/pr_data.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update PR data"
-          git push
-          cat content/pr_data.json
-      
+          git diff --quiet && git diff --staged --quiet && echo "No changes to commit" && exit 0
+          
+          git commit -m "Update PR data"
+          
+          # Force push through PAT (replace OWNER/REPO with your actual repo)
+          git push https://x-access-token:${TOKEN}@github.com/Iron-56/First-issue-test.git HEAD:main
+
       - name: Upload PR data as artifact
         uses: actions/upload-artifact@v4
         with:
