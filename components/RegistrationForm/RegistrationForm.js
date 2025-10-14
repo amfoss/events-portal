@@ -65,7 +65,7 @@ const RegistrationForm = () => {
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     // const rollNumberRegex = /^am\.[a-z]{2}\.[a-z0-9]{10}$/i;
-    const rollNumberRegex = /^[a-z]{2}\.[a-z]{2}\.u4[a-z]{3}25\d{3}$/i;
+    const rollNumberRegex = /^am\.[a-z]{2}\.u4[a-z]{3}\d{5}$/i;
     if (!emailRegex.test(email)) {
       toast.error('Please enter a valid email address.');
       return false;
