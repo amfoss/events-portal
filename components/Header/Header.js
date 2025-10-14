@@ -53,9 +53,11 @@ function Header() {
                                 <span className="edition-text">12th Edition</span>
                             </div>
                             <div className="edition-badge">
-                                <span className="edition-text">2025</span>
+                                <Image src="/assets/location.svg" alt="location" width={20} height={20} className="location-icon" />
+                                <span className="edition-text">Acharya Hall</span>
                             </div>
                         </div>
+
                         <div className="button-group">
                             <button onClick={scrollToRegistration}>REGISTER NOW</button>
                             <button onClick={scrollToItinerary}>SEE ITINERARY<Image src="/assets/caret.svg" alt=""width={16} height={16} /></button>
