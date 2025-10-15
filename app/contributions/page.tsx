@@ -23,6 +23,7 @@ interface PullRequest {
   body: string | null;
   labels: Array<{ name: string }>;
   html_url: string;
+  readme_content?: string;
 }
 
 function loadPRData(): PullRequest[] {
@@ -55,7 +56,8 @@ function Contributions() {
     date: new Date(pr.created_at).toISOString().split('T')[0],
     description: pr.body || "No description provided",
     labels: pr.labels.map(label => label.name),
-    url: pr.html_url
+    url: pr.html_url,
+    readmeContent: pr.readme_content || null
   }));
   return (
     <div className="App scroll-container">
@@ -120,6 +122,16 @@ function Contributions() {
                             ? contribution.description.slice(0, 65) + "..."
                             : contribution.description}
                         </p>
+                        {contribution.readmeContent && (
+                          <div className="readme-preview">
+                            <h4 className="readme-title">README Preview:</h4>
+                            <pre className="readme-content">
+                              {contribution.readmeContent.length > 200
+                                ? contribution.readmeContent.slice(0, 200) + "..."
+                                : contribution.readmeContent}
+                            </pre>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </a>

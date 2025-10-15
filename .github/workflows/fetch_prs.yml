@@ -23,8 +23,32 @@ jobs:
       - name: Fetch PR data
         run: |
           mkdir -p content
-          curl -s -L "https://api.github.com/repos/Iron-56/First-issue/pulls?state=all" | \
-          jq '[.[] | {
+          
+          # Fetch all PRs
+          prs=$(curl -s -L "https://api.github.com/repos/Iron-56/First-issue/pulls?state=all")
+          
+          # Process each PR and fetch README if it exists
+          echo "$prs" | jq -c '.[]' | while read -r pr; do
+            pr_number=$(echo "$pr" | jq -r '.number')
+            pr_head_sha=$(echo "$pr" | jq -r '.head.sha')
+            
+            # Check if README.md was modified in this PR
+            readme_content=""
+            files=$(curl -s -L "https://api.github.com/repos/Iron-56/First-issue/pulls/$pr_number/files")
+            readme_modified=$(echo "$files" | jq -r '.[] | select(.filename == "README.md") | .filename')
+            
+            if [ ! -z "$readme_modified" ]; then
+              # Fetch README.md content from the PR branch
+              readme_response=$(curl -s -L "https://api.github.com/repos/Iron-56/First-issue/contents/README.md?ref=$pr_head_sha")
+              readme_content=$(echo "$readme_response" | jq -r '.content // empty' | base64 -d 2>/dev/null || echo "")
+            fi
+            
+            # Add README content to PR data
+            echo "$pr" | jq --arg readme "$readme_content" '. + {readme_content: $readme}' >> /tmp/prs_with_readme.json
+          done
+          
+          # Combine all PRs into final JSON array
+          jq -s '[.[] | {
             id: .id,
             number: .number,
             title: .title,
@@ -37,8 +61,10 @@ jobs:
             merged_at: .merged_at,
             body: .body,
             labels: [.labels[] | {name: .name}],
-            html_url: .html_url
-          }]' > content/pr_data.json
+            html_url: .html_url,
+            readme_content: .readme_content
+          }]' /tmp/prs_with_readme.json > content/pr_data.json
+          
           echo "Saved PR data to content/pr_data.json"
       
       - name: Commit and push changes
