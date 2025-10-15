@@ -15,7 +15,7 @@ const RegistrationForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [limitReached, setLimitReached] = useState(false);
-  const registrationLimit = 230;
+  const registrationLimit = 210;
 
   const sheetBestEndpoint = process.env.NEXT_PUBLIC_SHEETBEST_ENDPOINT;
 
