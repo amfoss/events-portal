@@ -15,14 +15,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Fetch PR data with rate limit check
+      - name: Fetch PR data with rate limit check and redirect fix
         env:
           TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           mkdir -p content
           
-          # Fetch PRs using PAT to avoid rate limiting
-          RESPONSE=$(curl -s -H "Authorization: token ${TOKEN}" \
+          # Fetch PRs using PAT and follow redirects
+          RESPONSE=$(curl -s -L -H "Authorization: token ${TOKEN}" \
             "https://api.github.com/repos/Iron-56/First-issue-test/pulls?state=all")
           
           echo "GitHub API Response:"
@@ -50,8 +50,7 @@ jobs:
             echo "Saved PR data to content/pr_data.json"
             cat content/pr_data.json
           else
-            echo "API returned an error or rate limit exceeded. Skipping update."
-            # Optionally, save the error message for debugging
+            echo "API returned an error, redirect notice, or rate limit exceeded. Skipping update."
             echo "$RESPONSE" > content/pr_data_error.json
           fi
 
