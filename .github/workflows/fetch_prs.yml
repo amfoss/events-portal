@@ -15,28 +15,45 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Fetch PR data
+      - name: Fetch PR data with rate limit check
+        env:
+          TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           mkdir -p content
-          curl -s "https://api.github.com/repos/Iron-56/First-issue-test/pulls?state=all" | \
-          jq '[.[] | {
-            id: .id,
-            number: .number,
-            title: .title,
-            state: .state,
-            user: {
-              login: .user.login,
-              avatar_url: .user.avatar_url
-            },
-            created_at: .created_at,
-            merged_at: .merged_at,
-            body: .body,
-            labels: (.labels | map({name})),
-            html_url: .html_url
-          }]' > content/pr_data.json
           
-          echo "✅ Saved PR data to content/pr_data.json"
-          cat content/pr_data.json
+          # Fetch PRs using PAT to avoid rate limiting
+          RESPONSE=$(curl -s -H "Authorization: token ${TOKEN}" \
+            "https://api.github.com/repos/Iron-56/First-issue-test/pulls?state=all")
+          
+          echo "GitHub API Response:"
+          echo "$RESPONSE"
+          
+          # Check if response is an array (normal PR data) or object (error)
+          IS_ARRAY=$(echo "$RESPONSE" | jq 'if type=="array" then true else false end')
+          
+          if [ "$IS_ARRAY" = "true" ]; then
+            echo "$RESPONSE" | jq '[.[] | {
+              id: .id,
+              number: .number,
+              title: .title,
+              state: .state,
+              user: {
+                login: .user.login,
+                avatar_url: .user.avatar_url
+              },
+              created_at: .created_at,
+              merged_at: .merged_at,
+              body: .body,
+              labels: (.labels | map({name})),
+              html_url: .html_url
+            }]' > content/pr_data.json
+            echo "Saved PR data to content/pr_data.json"
+            cat content/pr_data.json
+          else
+            echo "API returned an error or rate limit exceeded. Skipping update."
+            # Optionally, save the error message for debugging
+            echo "$RESPONSE" > content/pr_data_error.json
+          fi
 
       - name: Commit and push changes using PAT
         env:
@@ -45,12 +62,12 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          git add content/pr_data.json
+          git add content/pr_data.json || true
           git diff --quiet && git diff --staged --quiet && echo "No changes to commit" && exit 0
           
           git commit -m "Update PR data"
           
-          # Force push through PAT (replace OWNER/REPO with your actual repo)
+          # Push changes via PAT
           git push https://x-access-token:${TOKEN}@github.com/Iron-56/First-issue-test.git HEAD:main
 
       - name: Upload PR data as artifact
