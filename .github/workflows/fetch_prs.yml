@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: '*/2 * * * *'
   workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to update'
+        default: 'hacktoberfest-25'
 
 jobs:
   fetch_pr_data:
@@ -11,6 +15,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: hacktoberfest-25
+          persist-credentials: true
+
       
       - name: Fetch PR data
         run: |
