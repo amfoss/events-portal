@@ -1,15 +1,255 @@
 [
   {
+    "id": 2916629665,
+    "number": 54,
+    "title": "yayy i have done this",
+    "state": "closed",
+    "user": {
+      "login": "Abiiii-1027",
+      "avatar_url": "https://avatars.githubusercontent.com/u/226579083?v=4"
+    },
+    "created_at": "2025-10-15T09:58:26Z",
+    "merged_at": "2025-10-15T09:58:36Z",
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/54",
+    "readme_content": "hello"
+  },
+  {
+    "id": 2916629091,
+    "number": 53,
+    "title": "i am awake now",
+    "state": "closed",
+    "user": {
+      "login": "rvhul608",
+      "avatar_url": "https://avatars.githubusercontent.com/u/224640832?v=4"
+    },
+    "created_at": "2025-10-15T09:58:14Z",
+    "merged_at": "2025-10-15T09:58:22Z",
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/53",
+    "readme_content": ""
+  },
+  {
+    "id": 2916629063,
+    "number": 52,
+    "title": "I am feeling sleep",
+    "state": "open",
+    "user": {
+      "login": "quantam-syntax",
+      "avatar_url": "https://avatars.githubusercontent.com/u/225582849?v=4"
+    },
+    "created_at": "2025-10-15T09:58:13Z",
+    "merged_at": null,
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/52",
+    "readme_content": ""
+  },
+  {
+    "id": 2916628404,
+    "number": 51,
+    "title": "Aadith EENAMBEECH",
+    "state": "open",
+    "user": {
+      "login": "amanhashim06",
+      "avatar_url": "https://avatars.githubusercontent.com/u/238173507?v=4"
+    },
+    "created_at": "2025-10-15T09:57:59Z",
+    "merged_at": null,
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/51",
+    "readme_content": "hello aadith is eenambeech"
+  },
+  {
+    "id": 2916628357,
+    "number": 50,
+    "title": "Added ReadMe",
+    "state": "closed",
+    "user": {
+      "login": "babz67",
+      "avatar_url": "https://avatars.githubusercontent.com/u/224954791?v=4"
+    },
+    "created_at": "2025-10-15T09:57:57Z",
+    "merged_at": "2025-10-15T09:58:06Z",
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/50",
+    "readme_content": ""
+  },
+  {
+    "id": 2916628284,
+    "number": 49,
+    "title": "this my pr",
+    "state": "open",
+    "user": {
+      "login": "guhan6117-coder",
+      "avatar_url": "https://avatars.githubusercontent.com/u/238175790?v=4"
+    },
+    "created_at": "2025-10-15T09:57:56Z",
+    "merged_at": null,
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/49",
+    "readme_content": ""
+  },
+  {
+    "id": 2916627714,
+    "number": 48,
+    "title": "Create README.md",
+    "state": "open",
+    "user": {
+      "login": "HARSHA-1119",
+      "avatar_url": "https://avatars.githubusercontent.com/u/132276467?v=4"
+    },
+    "created_at": "2025-10-15T09:57:45Z",
+    "merged_at": null,
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/48",
+    "readme_content": ""
+  },
+  {
+    "id": 2916627377,
+    "number": 47,
+    "title": "read",
+    "state": "closed",
+    "user": {
+      "login": "kramasrisurya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/238170645?v=4"
+    },
+    "created_at": "2025-10-15T09:57:38Z",
+    "merged_at": "2025-10-15T09:57:53Z",
+    "body": "qwerty",
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/47",
+    "readme_content": "hello"
+  },
+  {
+    "id": 2916626090,
+    "number": 46,
+    "title": "readme",
+    "state": "open",
+    "user": {
+      "login": "ageofultron-6",
+      "avatar_url": "https://avatars.githubusercontent.com/u/231025918?v=4"
+    },
+    "created_at": "2025-10-15T09:57:11Z",
+    "merged_at": null,
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/46",
+    "readme_content": "Hello World"
+  },
+  {
+    "id": 2916625911,
+    "number": 45,
+    "title": "added readme",
+    "state": "open",
+    "user": {
+      "login": "NithishKumar3310",
+      "avatar_url": "https://avatars.githubusercontent.com/u/224646924?v=4"
+    },
+    "created_at": "2025-10-15T09:57:07Z",
+    "merged_at": null,
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/45",
+    "readme_content": ""
+  },
+  {
+    "id": 2916625785,
+    "number": 44,
+    "title": "commit",
+    "state": "closed",
+    "user": {
+      "login": "bhavyaanil07",
+      "avatar_url": "https://avatars.githubusercontent.com/u/218811840?v=4"
+    },
+    "created_at": "2025-10-15T09:57:05Z",
+    "merged_at": "2025-10-15T09:57:15Z",
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/44",
+    "readme_content": "hello "
+  },
+  {
+    "id": 2916625366,
+    "number": 43,
+    "title": "ayush",
+    "state": "closed",
+    "user": {
+      "login": "Aayush177-cmd",
+      "avatar_url": "https://avatars.githubusercontent.com/u/225926104?v=4"
+    },
+    "created_at": "2025-10-15T09:56:56Z",
+    "merged_at": "2025-10-15T09:57:05Z",
+    "body": "Ayush",
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/43",
+    "readme_content": ""
+  },
+  {
+    "id": 2916623953,
+    "number": 42,
+    "title": "added",
+    "state": "open",
+    "user": {
+      "login": "abhiramkmarar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77226184?v=4"
+    },
+    "created_at": "2025-10-15T09:56:25Z",
+    "merged_at": null,
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/42",
+    "readme_content": "hii from the other side"
+  },
+  {
+    "id": 2916623852,
+    "number": 41,
+    "title": "my first pr",
+    "state": "open",
+    "user": {
+      "login": "prithewjraj",
+      "avatar_url": "https://avatars.githubusercontent.com/u/226901327?v=4"
+    },
+    "created_at": "2025-10-15T09:56:23Z",
+    "merged_at": null,
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/41",
+    "readme_content": "Hello"
+  },
+  {
+    "id": 2916623470,
+    "number": 40,
+    "title": "ishaan",
+    "state": "closed",
+    "user": {
+      "login": "ishaan120",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92666898?v=4"
+    },
+    "created_at": "2025-10-15T09:56:15Z",
+    "merged_at": null,
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/40",
+    "readme_content": "1qaz2wsx3edc4rfv5tgb6yhn7ujm8ik,9ol.0p;/-['"
+  },
+  {
     "id": 2916623336,
     "number": 39,
     "title": "Mclovin",
-    "state": "open",
+    "state": "closed",
     "user": {
       "login": "cld4p",
       "avatar_url": "https://avatars.githubusercontent.com/u/229626392?v=4"
     },
     "created_at": "2025-10-15T09:56:12Z",
-    "merged_at": null,
+    "merged_at": "2025-10-15T09:56:22Z",
     "body": null,
     "labels": [],
     "html_url": "https://github.com/Iron-56/First-issue/pull/39",
@@ -26,7 +266,7 @@
     },
     "created_at": "2025-10-15T09:56:10Z",
     "merged_at": null,
-    "body": null,
+    "body": "Aryan 67 67 ",
     "labels": [],
     "html_url": "https://github.com/Iron-56/First-issue/pull/38",
     "readme_content": ""
@@ -35,13 +275,13 @@
     "id": 2916622972,
     "number": 37,
     "title": "Chichu ",
-    "state": "open",
+    "state": "closed",
     "user": {
       "login": "nayantheerth",
       "avatar_url": "https://avatars.githubusercontent.com/u/225224072?v=4"
     },
     "created_at": "2025-10-15T09:56:05Z",
-    "merged_at": null,
+    "merged_at": "2025-10-15T09:56:16Z",
     "body": "wrote a readme",
     "labels": [],
     "html_url": "https://github.com/Iron-56/First-issue/pull/37",
@@ -238,245 +478,5 @@
     "labels": [],
     "html_url": "https://github.com/Iron-56/First-issue/pull/25",
     "readme_content": "Hello\nRishikk"
-  },
-  {
-    "id": 2916617043,
-    "number": 24,
-    "title": "First pull request",
-    "state": "closed",
-    "user": {
-      "login": "ANR-7",
-      "avatar_url": "https://avatars.githubusercontent.com/u/77839529?v=4"
-    },
-    "created_at": "2025-10-15T09:54:17Z",
-    "merged_at": "2025-10-15T09:54:28Z",
-    "body": "First pull request",
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/24",
-    "readme_content": ""
-  },
-  {
-    "id": 2916616610,
-    "number": 23,
-    "title": "Pull request",
-    "state": "closed",
-    "user": {
-      "login": "AdithyanandanArun",
-      "avatar_url": "https://avatars.githubusercontent.com/u/224833376?v=4"
-    },
-    "created_at": "2025-10-15T09:54:07Z",
-    "merged_at": "2025-10-15T09:54:17Z",
-    "body": null,
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/23",
-    "readme_content": ""
-  },
-  {
-    "id": 2916616473,
-    "number": 22,
-    "title": "readme.md",
-    "state": "open",
-    "user": {
-      "login": "DevNarayanU",
-      "avatar_url": "https://avatars.githubusercontent.com/u/217233701?v=4"
-    },
-    "created_at": "2025-10-15T09:54:05Z",
-    "merged_at": null,
-    "body": "Hello this is DEV NARAYAN U",
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/22",
-    "readme_content": ""
-  },
-  {
-    "id": 2916615662,
-    "number": 21,
-    "title": "Test",
-    "state": "open",
-    "user": {
-      "login": "6002aravind-cyber",
-      "avatar_url": "https://avatars.githubusercontent.com/u/227629793?v=4"
-    },
-    "created_at": "2025-10-15T09:53:48Z",
-    "merged_at": null,
-    "body": "aerriuhg",
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/21",
-    "readme_content": "Aravind S\nCSE AI"
-  },
-  {
-    "id": 2916615427,
-    "number": 20,
-    "title": "My first pr",
-    "state": "closed",
-    "user": {
-      "login": "abxijth",
-      "avatar_url": "https://avatars.githubusercontent.com/u/115166198?v=4"
-    },
-    "created_at": "2025-10-15T09:53:42Z",
-    "merged_at": "2025-10-15T09:53:55Z",
-    "body": null,
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/20",
-    "readme_content": "Hello World"
-  },
-  {
-    "id": 2916613692,
-    "number": 19,
-    "title": "RUfine777",
-    "state": "closed",
-    "user": {
-      "login": "Rufine777",
-      "avatar_url": "https://avatars.githubusercontent.com/u/221558406?v=4"
-    },
-    "created_at": "2025-10-15T09:53:04Z",
-    "merged_at": "2025-10-15T09:53:16Z",
-    "body": null,
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/19",
-    "readme_content": ""
-  },
-  {
-    "id": 2916613585,
-    "number": 18,
-    "title": "sai",
-    "state": "open",
-    "user": {
-      "login": "yakshchauhan",
-      "avatar_url": "https://avatars.githubusercontent.com/u/223095570?v=4"
-    },
-    "created_at": "2025-10-15T09:53:02Z",
-    "merged_at": null,
-    "body": "vfgh",
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/18",
-    "readme_content": "siddu = siddhart sai "
-  },
-  {
-    "id": 2916613342,
-    "number": 17,
-    "title": "added readme",
-    "state": "open",
-    "user": {
-      "login": "Dharun18-07",
-      "avatar_url": "https://avatars.githubusercontent.com/u/215744429?v=4"
-    },
-    "created_at": "2025-10-15T09:52:57Z",
-    "merged_at": null,
-    "body": null,
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/17",
-    "readme_content": "HI Its Dharun again"
-  },
-  {
-    "id": 2916611593,
-    "number": 16,
-    "title": "Hey",
-    "state": "closed",
-    "user": {
-      "login": "Praharsha2007",
-      "avatar_url": "https://avatars.githubusercontent.com/u/225059638?v=4"
-    },
-    "created_at": "2025-10-15T09:52:21Z",
-    "merged_at": "2025-10-15T09:52:31Z",
-    "body": "Created first pull request\r\n",
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/16",
-    "readme_content": "Praharsha"
-  },
-  {
-    "id": 2916611091,
-    "number": 15,
-    "title": "added introduction of ABHISHEK U PAI",
-    "state": "closed",
-    "user": {
-      "login": "ABHISHEKUPAI",
-      "avatar_url": "https://avatars.githubusercontent.com/u/214249683?v=4"
-    },
-    "created_at": "2025-10-15T09:52:13Z",
-    "merged_at": "2025-10-15T09:52:26Z",
-    "body": "adding my introduction im ABHISHEK U PAI  ",
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/15",
-    "readme_content": ""
-  },
-  {
-    "id": 2916602119,
-    "number": 14,
-    "title": "Added README.md File",
-    "state": "closed",
-    "user": {
-      "login": "devangdileep",
-      "avatar_url": "https://avatars.githubusercontent.com/u/81908197?v=4"
-    },
-    "created_at": "2025-10-15T09:49:08Z",
-    "merged_at": "2025-10-15T09:49:19Z",
-    "body": null,
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/14",
-    "readme_content": "Hello Hai Hi"
-  },
-  {
-    "id": 2916517489,
-    "number": 13,
-    "title": "test",
-    "state": "closed",
-    "user": {
-      "login": "Khushal928",
-      "avatar_url": "https://avatars.githubusercontent.com/u/174110595?v=4"
-    },
-    "created_at": "2025-10-15T09:21:42Z",
-    "merged_at": "2025-10-15T09:22:00Z",
-    "body": null,
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/13",
-    "readme_content": "test"
-  },
-  {
-    "id": 2916487387,
-    "number": 12,
-    "title": "test",
-    "state": "closed",
-    "user": {
-      "login": "AnandajithS",
-      "avatar_url": "https://avatars.githubusercontent.com/u/177180079?v=4"
-    },
-    "created_at": "2025-10-15T09:13:40Z",
-    "merged_at": null,
-    "body": null,
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/12",
-    "readme_content": "test"
-  },
-  {
-    "id": 2916470173,
-    "number": 11,
-    "title": "testing",
-    "state": "closed",
-    "user": {
-      "login": "AnandajithS",
-      "avatar_url": "https://avatars.githubusercontent.com/u/177180079?v=4"
-    },
-    "created_at": "2025-10-15T09:08:51Z",
-    "merged_at": "2025-10-15T09:09:05Z",
-    "body": null,
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/11",
-    "readme_content": "testing"
-  },
-  {
-    "id": 2916449053,
-    "number": 10,
-    "title": "I have made a PR",
-    "state": "closed",
-    "user": {
-      "login": "AnandajithS",
-      "avatar_url": "https://avatars.githubusercontent.com/u/177180079?v=4"
-    },
-    "created_at": "2025-10-15T09:03:02Z",
-    "merged_at": "2025-10-15T09:03:12Z",
-    "body": null,
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/10",
-    "readme_content": "Hi this is Anandajith"
   }
 ]
