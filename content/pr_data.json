@@ -1,5 +1,53 @@
 [
   {
+    "id": 2916800565,
+    "number": 134,
+    "title": "Create README.md",
+    "state": "closed",
+    "user": {
+      "login": "siddhrrth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/238174082?v=4"
+    },
+    "created_at": "2025-10-15T10:45:44Z",
+    "merged_at": "2025-10-15T10:45:53Z",
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/134",
+    "readme_content": "Nice try gang"
+  },
+  {
+    "id": 2916785536,
+    "number": 133,
+    "title": "yaksh",
+    "state": "closed",
+    "user": {
+      "login": "yakshchauhan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/223095570?v=4"
+    },
+    "created_at": "2025-10-15T10:41:02Z",
+    "merged_at": "2025-10-15T10:42:32Z",
+    "body": "yaksh",
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/133",
+    "readme_content": "sai.siddhart "
+  },
+  {
+    "id": 2916760932,
+    "number": 132,
+    "title": "This is my pull request",
+    "state": "closed",
+    "user": {
+      "login": "Tharak21",
+      "avatar_url": "https://avatars.githubusercontent.com/u/207183649?v=4"
+    },
+    "created_at": "2025-10-15T10:34:48Z",
+    "merged_at": "2025-10-15T10:36:05Z",
+    "body": null,
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/132",
+    "readme_content": "Hello "
+  },
+  {
     "id": 2916723649,
     "number": 131,
     "title": "Third attempt",
@@ -339,13 +387,13 @@
     "id": 2916686031,
     "number": 110,
     "title": "What raaa sudeep",
-    "state": "open",
+    "state": "closed",
     "user": {
       "login": "nayantheerth",
       "avatar_url": "https://avatars.githubusercontent.com/u/225224072?v=4"
     },
     "created_at": "2025-10-15T10:14:17Z",
-    "merged_at": null,
+    "merged_at": "2025-10-15T10:33:09Z",
     "body": "qwerty",
     "labels": [],
     "html_url": "https://github.com/Iron-56/First-issue/pull/110",
@@ -355,13 +403,13 @@
     "id": 2916685753,
     "number": 109,
     "title": "Why branch",
-    "state": "open",
+    "state": "closed",
     "user": {
       "login": "siddharthsai218",
       "avatar_url": "https://avatars.githubusercontent.com/u/232212931?v=4"
     },
     "created_at": "2025-10-15T10:14:11Z",
-    "merged_at": null,
+    "merged_at": "2025-10-15T10:34:50Z",
     "body": "Hii",
     "labels": [],
     "html_url": "https://github.com/Iron-56/First-issue/pull/109",
@@ -419,64 +467,16 @@
     "id": 2916682575,
     "number": 105,
     "title": "pr_1",
-    "state": "open",
+    "state": "closed",
     "user": {
       "login": "sanjanasaji8121",
       "avatar_url": "https://avatars.githubusercontent.com/u/227384970?v=4"
     },
     "created_at": "2025-10-15T10:13:19Z",
-    "merged_at": null,
+    "merged_at": "2025-10-15T10:35:30Z",
     "body": null,
     "labels": [],
     "html_url": "https://github.com/Iron-56/First-issue/pull/105",
     "readme_content": "#My First Pull Request!!!!\nYaaayyy I Had a lot of fun in the hacktober thingy...\ndefo suggested\n\n#What we learnt\nwe learnt git gihub all stufff"
-  },
-  {
-    "id": 2916682465,
-    "number": 104,
-    "title": "MOGGED",
-    "state": "closed",
-    "user": {
-      "login": "HARiGOViND-7",
-      "avatar_url": "https://avatars.githubusercontent.com/u/221264677?v=4"
-    },
-    "created_at": "2025-10-15T10:13:16Z",
-    "merged_at": "2025-10-15T10:13:27Z",
-    "body": null,
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/104",
-    "readme_content": "Helloo AMAN mogged Aadith just now!!\nHe's a PRO Mogger.."
-  },
-  {
-    "id": 2916682125,
-    "number": 103,
-    "title": "twst",
-    "state": "closed",
-    "user": {
-      "login": "yazeen-29",
-      "avatar_url": "https://avatars.githubusercontent.com/u/222848004?v=4"
-    },
-    "created_at": "2025-10-15T10:13:08Z",
-    "merged_at": "2025-10-15T10:13:18Z",
-    "body": null,
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/103",
-    "readme_content": ""
-  },
-  {
-    "id": 2916682008,
-    "number": 102,
-    "title": "Raj branch",
-    "state": "open",
-    "user": {
-      "login": "rajarajannarayanan161024-web",
-      "avatar_url": "https://avatars.githubusercontent.com/u/228342285?v=4"
-    },
-    "created_at": "2025-10-15T10:13:07Z",
-    "merged_at": null,
-    "body": null,
-    "labels": [],
-    "html_url": "https://github.com/Iron-56/First-issue/pull/102",
-    "readme_content": "My name is Rahul Krishna"
   }
 ]
