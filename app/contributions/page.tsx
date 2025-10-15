@@ -122,18 +122,18 @@ function Contributions() {
                             ? contribution.description.slice(0, 65) + "..."
                             : contribution.description}
                         </p>
-                        {contribution.readmeContent && (
-                          <div className="readme-preview">
-                            <h4 className="readme-title">README Preview:</h4>
-                            <pre className="readme-content">
-                              {contribution.readmeContent.length > 200
-                                ? contribution.readmeContent.slice(0, 200) + "..."
-                                : contribution.readmeContent}
-                            </pre>
-                          </div>
-                        )}
                       </div>
                     </div>
+                    {contribution.readmeContent && (
+                      <div className="readme-preview">
+                        <h4 className="readme-title">README Preview:</h4>
+                        <pre className="readme-content">
+                          {contribution.readmeContent.length > 200
+                            ? contribution.readmeContent.slice(0, 200) + "..."
+                            : contribution.readmeContent}
+                        </pre>
+                      </div>
+                    )}
                   </a>
                 ))
               ) : (
