@@ -1,5 +1,21 @@
 [
   {
+    "id": 2916380737,
+    "number": 9,
+    "title": "My PR",
+    "state": "closed",
+    "user": {
+      "login": "AnandajithS",
+      "avatar_url": "https://avatars.githubusercontent.com/u/177180079?v=4"
+    },
+    "created_at": "2025-10-15T08:42:08Z",
+    "merged_at": "2025-10-15T08:42:21Z",
+    "body": "This is a PR made by Anandajith",
+    "labels": [],
+    "html_url": "https://github.com/Iron-56/First-issue/pull/9",
+    "readme_content": "Hello my name is Anandajith"
+  },
+  {
     "id": 2915683920,
     "number": 8,
     "title": "Test PR",
