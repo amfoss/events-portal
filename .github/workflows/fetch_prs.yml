@@ -23,7 +23,7 @@ jobs:
           
           # Fetch PRs using PAT and follow redirects
           RESPONSE=$(curl -s -L -H "Authorization: token ${TOKEN}" \
-            "https://api.github.com/repos/Iron-56/First-issue-test/pulls?state=all")
+            "https://api.github.com/repos/Iron-56/First-issue/pulls?state=all")
           
           echo "GitHub API Response:"
           echo "$RESPONSE"
@@ -67,7 +67,7 @@ jobs:
           git commit -m "Update PR data"
           
           # Push changes via PAT
-          git push https://x-access-token:${TOKEN}@github.com/Iron-56/First-issue-test.git HEAD:main
+          git push https://x-access-token:${TOKEN}@github.com/Iron-56/First-issue.git HEAD:main
 
       - name: Upload PR data as artifact
         uses: actions/upload-artifact@v4
