@@ -57,6 +57,7 @@
   text-decoration: none;
   color: inherit;
   display: block;
+  height: fit-content;
 }
 
 .contribution-card::before {
@@ -91,6 +92,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: start;
   gap: 0.5rem;
 }
 
@@ -308,4 +310,50 @@
   color: var(--Theme-Primary);
   font-size: 1.2rem;
   opacity: 0.7;
+}
+
+.readme-preview {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border: 1px solid rgba(208, 204, 227, 0.15);
+}
+
+.readme-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #C2C2FF;
+  margin: 0 0 0.5rem 0;
+}
+
+.readme-content {
+  font-size: 0.75rem;
+  color: var(--Theme-Primary);
+  line-height: 1.5;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: 'Courier New', Courier, monospace;
+  opacity: 0.85;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.readme-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.readme-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.readme-content::-webkit-scrollbar-thumb {
+  background: rgba(138, 66, 202, 0.5);
+  border-radius: 3px;
+}
+
+.readme-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(138, 66, 202, 0.7);
 }
