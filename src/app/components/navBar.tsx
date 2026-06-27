@@ -94,7 +94,7 @@ export default function NavBar({ currentSeats, triggerSeats }: NavBarProps) {
   const navigationItems = [
     { label: "Register", href: "/register" },
     { label: "Schedule", section: "schedule" },
-    { label: "Speakers", section: "speakers" },
+    // { label: "Speakers", section: "speakers" },
     { label: "FAQ's", section: "faq" },
   ];
 

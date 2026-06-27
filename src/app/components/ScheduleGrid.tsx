@@ -3,98 +3,80 @@ import { Sessions } from "../utils/types";
 export default function Schedule() {
   const sessions: Sessions[] = [
     {
+      no: 0,
+      category: "Open Source and Git Basics",
+      day: 0,
+      topic:
+        "Introduction to Open Source, Git, GitHub, collaboration workflows, and workshop roadmap.",
+    },
+    {
       no: 1,
-      category: "Introduction",
+      category: "HTML",
       day: 1,
       topic:
-        "What makes a good software engineer, plan for the workshop, outcomes",
+        "Building the structure of web pages using semantic HTML elements and forms.",
     },
     {
       no: 2,
-      category: "Terminal Basics",
+      category: "CSS",
       day: 2,
       topic:
-        "Setting up the development environment, basic shell commands, and how to Google effectively for solutions.",
+        "Styling web pages with CSS, layouts, Flexbox, Grid, and responsive design.",
     },
     {
       no: 3,
-      category: "Advanced Terminal",
+      category: "JavaScript",
       day: 3,
       topic:
-        "Advanced terminal commands and workflows to boost your productivity as a developer.",
+        "JavaScript fundamentals, DOM manipulation, events, and interactive web applications.",
     },
     {
       no: 4,
-      category: "Git Basics",
+      category: "Intro to React & Vite",
       day: 4,
       topic:
-        "Version Control System (Git) basics and essential commands for managing your code.",
+        "Getting started with React, JSX, components, props, state, and Vite.",
     },
     {
       no: 5,
-      category: "GitHub & Open Source",
+      category: "Project Frontend",
       day: 5,
-      topic: "GitHub, GitLab, and Open Source",
+      topic: "Building the frontend of the project using reusable React components.",
     },
     {
       no: 6,
-      category: "Web Development Intro",
+      category: "Finish Frontend & Deploy",
       day: 6,
       topic:
-        "Introduction to Web development, HTML fundamentals, and CSS styling.",
+        "Completing the frontend, optimizing responsiveness, and deploying the application.",
     },
     {
       no: 7,
-      category: "JavaScript & DOM",
+      category: "Intro to Backend & Supabase",
       day: 7,
       topic:
-        "Get started with JavaScript programming and Document Object Model manipulation.",
+        "Introduction to backend concepts, databases, authentication, and Supabase.",
     },
     {
       no: 8,
-      category: "Portfolio Project",
+      category: "APIs & Backend",
       day: 8,
       topic:
-        "Build your own professional portfolio website and host it on Vercel.",
+        "Building APIs, handling backend logic, and managing application data.",
     },
     {
       no: 9,
-      category: "APIs & Backend",
+      category: "Final Integration",
       day: 9,
       topic:
-        "Understanding APIs, JSON, and introduction to different backend frameworks.",
+        "Connecting frontend and backend systems into a complete full-stack application.",
     },
     {
       no: 10,
-      category: "Flutter Setup",
+      category: "Wrap Up",
       day: 10,
       topic:
-        "Flutter installation, setup, and understanding the basics of mobile development.",
-    },
-    {
-      no: 11,
-      category: "Flutter Development",
-      day: 11,
-      topic: "Flutter development (continued)",
-    },
-    {
-      no: 12,
-      category: "Flutter Advanced",
-      day: 12,
-      topic: "Continue with Flutter development and explore advanced concepts.",
-    },
-    {
-      no: 13,
-      category: "AI Integration",
-      day: 13,
-      topic:
-        "Building your first Flutter app with AI integration - the future of development.",
-    },
-    {
-      no: 14,
-      category: "Open Source Future",
-      day: 14,
-      topic: "Going further with Open Source",
+        "Project showcase, feedback, open source opportunities, and next learning steps.",
     },
   ];
 

@@ -12,7 +12,7 @@ import SwiperCarousel from "./components/speakerCarousel";
 // import axios from "axios";
 export default function WorkshopPage() {
   // const [currentSeats,setCurrentSeats]=useState(0)
-  const currentSeats = 70;
+  const currentSeats = 100;
   const [showSeats, setShowSeats] = useState(false);
   const triggerSeats = (trigger: boolean) => {
     setShowSeats(trigger);
@@ -54,7 +54,7 @@ export default function WorkshopPage() {
             src="/bg4.png"
           />
           <Schedule />
-          <SwiperCarousel />
+          {/* <SwiperCarousel /> */}
           <FaqGrid />
           <Footer />
         </motion.div>
