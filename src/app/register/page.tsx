@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { FormData } from "../utils/types";
 import { ToastContainer, toast } from "react-toastify";
 import { ArrowLeft, HelpCircle } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 //  import axios from "axios";
 
@@ -76,20 +76,6 @@ export default function Component() {
   // }
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[] via-[#000000] to-[] relative px-6">
-      {/* <Image
-        alt="Background"
-        width={1200}
-        height={1200}
-        className="absolute z-0 top-0 left-0 pointer-events-none"
-        src="/bg1.png"
-      />
-      <Image
-        alt="Background"
-        width={1200}
-        height={1200}
-        className="absolute z-0 scale-y-[-1] bottom-0 right-0 pointer-events-none"
-        src="/bg2.png"
-      /> */}
       <ToastContainer />
       <div className="absolute top-6 left-6 z-50">
         <Link
