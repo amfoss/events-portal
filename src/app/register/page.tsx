@@ -75,8 +75,8 @@ export default function Component() {
   //   console.log(res.data)
   // }
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#4d0929] via-[#000000] to-[#3c1c3f] relative px-6">
-      <Image
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[] via-[#000000] to-[] relative px-6">
+      {/* <Image
         alt="Background"
         width={1200}
         height={1200}
@@ -89,7 +89,7 @@ export default function Component() {
         height={1200}
         className="absolute z-0 scale-y-[-1] bottom-0 right-0 pointer-events-none"
         src="/bg2.png"
-      />
+      /> */}
       <ToastContainer />
       <div className="absolute top-6 left-6 z-50">
         <Link
@@ -212,8 +212,8 @@ export default function Component() {
                 <tbody className="text-gray-300">
                   <tr>
                     <td className="py-2">Seat x 1</td>
-                    <td className="py-2">₹1499</td>
-                    <td className="py-2">₹1499</td>
+                    <td className="py-2">₹999</td>
+                    <td className="py-2">₹999</td>
                   </tr>
                   {/* <tr>
                     <td className="py-2">Taxes</td>
@@ -228,7 +228,7 @@ export default function Component() {
                     </td>
                     <td></td>
                     <td className="pt-4 text-white font-semibold text-lg">
-                      ₹1499
+                      ₹999
                     </td>
                   </tr>
                 </tfoot>

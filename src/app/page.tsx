@@ -8,7 +8,7 @@ import FaqGrid from "./components/faqGrid";
 import NavBar from "./components/navBar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import SwiperCarousel from "./components/speakerCarousel";
+// import SwiperCarousel from "./components/speakerCarousel";
 // import axios from "axios";
 export default function WorkshopPage() {
   // const [currentSeats,setCurrentSeats]=useState(0)
@@ -23,8 +23,8 @@ export default function WorkshopPage() {
   // getSeats()},[])
   return (
     <>
-      <div className="min-h-screen z-10 bg-gradient-to-b text-white from-[#202020] to-[#000] overflow-x-hidden">
-        <Image
+      <div className="min-h-screen z-10 bg-gradient-to-b text-white  overflow-x-hidden">
+        {/* <Image
           alt="Background"
           width={1200}
           height={1200}
@@ -37,7 +37,7 @@ export default function WorkshopPage() {
           height={1200}
           className="absolute z-0 right-0"
           src="/bg3.png"
-        />
+        /> */}
         <NavBar currentSeats={currentSeats} triggerSeats={triggerSeats} />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,13 +46,13 @@ export default function WorkshopPage() {
         >
           <Header currentSeats={currentSeats} showSeats={showSeats} />
 
-          <Image
+          {/* <Image
             alt="Background"
             width={1200}
             height={1200}
             className="absolute z-0 pointer-events-none"
             src="/bg4.png"
-          />
+          /> */}
           <Schedule />
           {/* <SwiperCarousel /> */}
           <FaqGrid />

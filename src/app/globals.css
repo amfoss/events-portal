@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Lekton:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
 @theme {
-  --font-Outfit: "Outfit", "san-serif";
+  --font-Outfit: "Outfit", "sans-serif";
 }
 @theme {
   --font-Lalezar: "Lalezar", "sans-serif";
@@ -31,9 +31,62 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: #05070f;
+  min-height: 100vh;
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  right: -100%;
+  bottom: -100%;
+  width: 300%;
+  height: 300%;
+  z-index: -1;
+  background-size: 100% 100%;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+body::before {
+  background-image:
+    radial-gradient(
+      circle at 40% 35%,
+      rgba(10, 10, 10, 0.75) 0%,
+      rgba(32, 35, 41, 0.2) 25%,
+      rgba(19, 32, 59, 0) 50%
+    ),
+    radial-gradient(
+      circle at 75% 25%,
+      #8b5cf6b3 0%,
+      rgba(139, 92, 246, 0.15) 30%,
+      rgba(139, 92, 246, 0) 60%
+    );
+  animation: dynamicFloatOne 10s ease-in-out infinite alternate;
+}
+
+body::after {
+  background-image:
+    radial-gradient(
+      circle at 65% 70%,
+      #f43f5ecc 0%,
+      #f43f5e33 25%,
+      rgba(244, 63, 94, 0) 55%
+    ),
+    radial-gradient(
+      circle at 25% 75%,
+      rgba(70, 70, 87, 0.65) 0%,
+      rgba(18, 18, 19, 0.1) 35%,
+      rgba(99, 102, 241, 0) 60%
+    );
+  animation: dynamicFloatTwo 10s ease-in-out infinite alternate;
 }
 .swiper-pagination-bullet {
   background-color: white !important;
@@ -42,4 +95,27 @@ body {
 
 .swiper-pagination-bullet-active {
   opacity: 1;
+}
+@keyframes dynamicFloatOne {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(3%, 5%) rotate(360deg) scale(1.1);
+  }
+  100% {
+    transform: translate(-1%, 2%) rotate(130deg) scale(1);
+  }
+}
+
+@keyframes dynamicFloatTwo {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1.1);
+  }
+  50% {
+    transform: translate(-4%, -3%) rotate(-80deg) scale(0.95);
+  }
+  100% {
+    transform: translate(2%, -5%) rotate(-160deg) scale(1.1);
+  }
 }

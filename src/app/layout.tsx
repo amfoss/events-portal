@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Lalezar, Lekton, Outfit } from "next/font/google";
 import "./globals.css";
 const outfitSans = Outfit({
-  variable: "--font-Outpfit",
+  variable: "--font-Outfit",
   subsets: ["latin"],
 });
 const lalezarSans = Lalezar({

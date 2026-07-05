@@ -85,7 +85,7 @@ export default function Schedule() {
       <div>
         <div className="w-fit">
           <p className="text-4xl font-bold text-white">Schedule</p>
-          <div className="w-[80%] m-auto mt-1 h-1 bg-gradient-to-r  from-[#FF06E4] to-[#770297]"></div>
+          <div className="w-[80%] m-auto mt-1 h-1 bg-gradient-to-r  from-[#f07c8fff] to-[#8b5cf6]"></div>
         </div>
       </div>
       <div className="min-h-screen py-12  text-white font-sans">

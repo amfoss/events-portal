@@ -57,7 +57,7 @@ const NavBarLink = ({ label, section }: NavBarLinkProps) => {
             animate={{ scaleX: 1, opacity: 1 }}
             exit={{ scaleX: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="absolute -bottom-1 left-0 w-full h-[3px] bg-gradient-to-r from-[#FF06E4] to-[#FF7B0A] origin-left rounded-full"
+            className="absolute -bottom-1 left-0 w-full h-[3px] bg-gradient-to-r from-[#f07c8fff] to-[#8b5cf6] origin-left rounded-full"
           />
         )}
       </AnimatePresence>
@@ -169,7 +169,7 @@ export default function NavBar({ currentSeats, triggerSeats }: NavBarProps) {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -20, scale: 0.8 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="bg-gradient-to-r from-[#FF06E4] to-[#770297] px-4 py-2 rounded-full font-bold text-sm md:text-base font-Lalezar shadow-lg border border-white/20"
+                className="bg-gradient-to-r from-[#f07c8fff] to-[#8b5cf6] px-4 py-2 rounded-full font-bold text-sm md:text-base font-Lalezar shadow-lg border border-white/20"
               >
                 <span className="text-white">
                   Only {currentSeats} seats left!
@@ -226,7 +226,7 @@ export default function NavBar({ currentSeats, triggerSeats }: NavBarProps) {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="fixed top-0 right-0 w-70 h-full bg-gradient-to-b from-[#71293e] via-[#202020] to-[#0e0e0e] text-white z-50 shadow-2xl"
+              className="fixed top-0 right-0 w-70 h-full bg-gradient-to-b from-[#f43f5e33] via-[#202020] to-[#0e0e0e] text-white z-50 shadow-2xl"
             >
               <div className="flex flex-col h-full">
                 <div className="p-6 border-b border-white/10">
