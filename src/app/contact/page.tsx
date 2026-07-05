@@ -3,7 +3,7 @@ import { ArrowLeft, Mail, Phone, MapPin, Scale, Clock } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#4d0929] via-[#000000] to-[#3c1c3f] relative px-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[] via-[#000000] to-[#3c1c3f] relative px-6">
       <div className="absolute z-0 top-0 left-0 w-full h-full opacity-20">
         <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-pink-500/20 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-purple-500/20 to-transparent rounded-full blur-3xl"></div>

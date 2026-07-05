@@ -27,7 +27,7 @@ function getTimeLeft(targetDate: Date) {
 }
 
 export default function Timer() {
-  const targetDate = new Date("2025-07-18T00:00:00");
+  const targetDate = new Date("2026-07-20T00:00:00");
   const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
   useEffect(() => {
     const interval = setInterval(() => {
@@ -47,7 +47,7 @@ export default function Timer() {
   }, [targetDate]);
   return (
     <div>
-      <div className="p-[3px] rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500">
+      <div className="p-[3px] rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
         <div className="flex gap-6 px-8 text-lg md:text-3xl py-4 bg-black rounded-2xl font-mono text-white text-center">
           <TimeUnit value={timeLeft.days || "00"} label="Days" />
           <TimeUnit value={timeLeft.hours || "00"} label="Hours" />

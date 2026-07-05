@@ -64,23 +64,23 @@ export default function FaqGrid() {
     {
       question: "Do I need a laptop to participate?",
       answer:
-        "Yes, we recommend bringing your own laptop. If you don’t have one, you can share with a friend, or let us know in advance so we can try to make arrangements.",
+        "Yes, we recommend bringing your own laptop. If you don’t have one, you can share with a friend.",
     },
     {
       question: "Is this workshop free?",
       answer:
-        "Not quite – it’s ₹1499! That gets you 14 days packed with hands-on learning, exciting projects, and a whole lot of fun. It’s an experience your future self will totally thank you for. 😎🚀",
+        "Not quite – it’s ₹999! That gets you 10 days packed with hands-on learning, exciting projects, and a whole lot of fun. It’s an experience your future self will totally thank you for. 😎🚀",
     },
     {
       question: "Do I need to know how to code?",
       answer:
         "Not at all. This workshop is meant for complete beginners. We’ll guide you step-by-step.",
     },
-    // {
-    //   question: "Will I get a certificate?",
-    //   answer:
-    //     "Yes! All participants who complete the workshop will receive a certificate of participation.",
-    // },
+    {
+      question: "Will I get a certificate?",
+      answer:
+        "Yes! All participants who complete the workshop will receive a certificate of participation.",
+    },
     {
       question: "How do I register?",
       answer:
@@ -91,18 +91,23 @@ export default function FaqGrid() {
       answer:
         "Just bring: Your laptop and charger, A notebook and pen (optional), Lots of energy and questions!",
     },
-    // {
-    //   question: "Who is organizing this workshop?",
-    //   answer:
-    //     "This workshop is organized by amFOSS, a student community at Amrita Vishwa Vidyapeetham focused on open source, programming, and tech outreach.",
-    // },
+    {
+      question: "Who is organizing this workshop?",
+      answer:
+        "This workshop is organized by amFOSS, a student community at Amrita Vishwa Vidyapeetham focused on open source, programming, and tech outreach.",
+    },
+    {
+      question: "Who is going to teach us?",
+      answer:
+        "The sessions will be led by amFOSS mentors and core members, each covering topics based on their area of expertise.",
+    },
   ];
   return (
     <div id="faq" className="max-w-4xl mx-auto my-20 md:my-0 px-6 md:px-10">
       <div>
         <div className="mb-8 w-fit">
           <p className="text-4xl font-bold text-white">FAQs</p>
-          <div className="w-[80%] m-auto mt-1 h-1 bg-gradient-to-r  from-[#FF06E4] to-[#770297]"></div>
+          <div className="w-[80%] m-auto mt-1 h-1 bg-gradient-to-r  from-[#f07c8fff] to-[#8b5cf6]"></div>
         </div>
       </div>
       <div className="grid grid-cols-1  gap-4">

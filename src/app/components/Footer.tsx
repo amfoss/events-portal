@@ -18,7 +18,7 @@ export default function Footer() {
             href="/register"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-10 bg-gradient-to-r  from-[#FF06E4] to-[#770297] text-white px-10 py-4 rounded-full text-lg font-bold uppercase "
+            className="mt-10 bg-gradient-to-r  from-[#f07c8fff] to-[#8b5cf6] text-white px-10 py-4 rounded-full text-lg font-bold uppercase "
           >
             REGISTER NOW
           </motion.a>
