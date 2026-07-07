@@ -6,6 +6,7 @@ import FaqGrid from "./components/faqGrid";
 import NavBar from "./components/navBar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SampleCertificate from "./components/SampleCertificate";
 // import SwiperCarousel from "./components/speakerCarousel";
 export default function WorkshopPage() {
   // const [currentSeats,setCurrentSeats]=useState(0)
@@ -29,6 +30,7 @@ export default function WorkshopPage() {
         >
           <Header currentSeats={currentSeats} showSeats={showSeats} />
           <Schedule />
+          <SampleCertificate/>
           {/* <SwiperCarousel /> */}
           <FaqGrid />
           <Footer />
