@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button id="pay">Pay</button>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+document.getElementById('pay').onclick = function() {
+  var options = {
+    key: "rzp_live_TCaNUgfVgYIWR1",
+    order_id: "",    
+    amount: 100, 
+    contact: "9289282016",             
+    currency: "INR",
+    handler: function (response) {
+      fetch('http://localhost:5000/verify-payment/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(response)
+      }).then(r => r.json()).then(console.log);
+    }
+  };
+  new Razorpay(options).open();
+};
+</script>
+</body>
+</html>

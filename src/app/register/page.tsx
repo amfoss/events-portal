@@ -6,7 +6,8 @@ import { ToastContainer, toast } from "react-toastify";
 import { ArrowLeft, HelpCircle } from "lucide-react";
 // import Image from "next/image";
 import Link from "next/link";
-//  import axios from "axios";
+import axios from "axios";
+import Script from "next/script";
 
 export default function Component() {
   const [formData, setFormData] = useState<FormData>({
@@ -25,8 +26,8 @@ export default function Component() {
       !formData.email.trim() ||
       !formData.roll_no.trim() ||
       !formData.phone_number.trim() ||
-      !formData.checkBox2
-      // !formData.checkBox,    
+      !formData.checkBox2,
+      // !formData.checkBox,
     );
   }, [formData]);
 
@@ -61,7 +62,7 @@ export default function Component() {
     const validRoll = isValidRollNumber(formData.roll_no);
     const validPhone = isValidPhone(formData.phone_number);
     if (formData.name !== "" && validEmail && validRoll && validPhone) {
-      // sendData()
+      sendData();
       console.log("SendData");
     } else {
       if (formData.name === "") toast.warn("Please Enter Your Name.");
@@ -70,79 +71,110 @@ export default function Component() {
       else if (!validPhone) toast.warn("Enter A Valid Phone Number");
     }
   };
-  // const sendData=async()=>{
-  //   const res=await axios.post("http://127.0.0.1:5000/create_order/",formData)
-  //   console.log(res.data)
-  // }
+  const sendData = async () => {
+    try {
+      const { data } = await axios.post(
+        "https://amfossworkshop.khushalch.me/create_order/",
+        formData
+      );
+
+      const options = {
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY,
+        order_id: data.order_id,
+        amount: data.amount,
+        currency: data.currency,
+        name: "amFOSS Workshop",
+        handler: async function (response: any) {
+          await axios.post(
+            "https://amfossworkshop.khushalch.me/verify-payment/",
+            response
+          );
+
+          toast.success("Payment Successful");
+        },
+      };
+
+      const razorpay = new (window as any).Razorpay(options);
+      razorpay.open();
+
+    } catch (err) {
+      console.error(err);
+      toast.error("Unable to create order");
+    }
+  };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[] via-[#000000] to-[] relative px-6">
-      <ToastContainer />
-      <div className="absolute top-6 left-6 z-50">
-        <Link
-          href="/"
-          className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
+    <>
+      <Script
+        src="https://checkout.razorpay.com/v1/checkout.js"
+        strategy="afterInteractive"
+      />
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[] via-[#000000] to-[] relative px-6">
+        <ToastContainer />
+        <div className="absolute top-6 left-6 z-50">
+          <Link
+            href="/"
+            className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
+          >
+            <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
+            <span className="hidden sm:inline text-sm font-medium">Back</span>
+          </Link>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="max-w-6xl mx-auto w-full"
         >
-          <ArrowLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform duration-300" />
-          <span className="hidden sm:inline text-sm font-medium">Back</span>
-        </Link>
-      </div>
+          <div className="grid grid-cols-1 my-20 lg:grid-cols-2 gap-12 items-start">
+            <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-gray-700 shadow-2xl shadow-pink-900/20">
+              <div className="text-center mb-8">
+                <motion.h1
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.3 }}
+                  className="text-4xl font-bold text-white tracking-wide"
+                >
+                  Register
+                </motion.h1>
+                <p className="text-gray-400 mt-2">Secure your seat now</p>
+              </div>
 
-
-      <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-6xl mx-auto w-full"
-      >
-        <div className="grid grid-cols-1 my-20 lg:grid-cols-2 gap-12 items-start">
-          <div className="backdrop-blur-sm bg-white/5 p-8 rounded-2xl border border-gray-700 shadow-2xl shadow-pink-900/20">
-            <div className="text-center mb-8">
-              <motion.h1
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3 }}
-                className="text-4xl font-bold text-white tracking-wide"
-              >
-                Register
-              </motion.h1>
-              <p className="text-gray-400 mt-2">Secure your seat now</p>
-            </div>
-
-            <form className="space-y-6">
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                value={formData.name}
-                onChange={changeValue}
-                className="w-full px-4 py-3 bg-black/30 border border-pink-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500"
-              />
-              <input
-                type="text"
-                name="roll_no"
-                placeholder="Admission Number"
-                value={formData.roll_no}
-                onChange={changeValue}
-                className="w-full px-4 py-3 bg-black/30 border border-pink-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Personal Email Address"
-                value={formData.email}
-                onChange={changeValue}
-                className="w-full px-4 py-3 bg-black/30 border border-pink-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500"
-              />
-              <input
-                type="tel"
-                name="phone_number"
-                placeholder="Phone Number"
-                value={formData.phone_number}
-                onChange={changeValue}
-                maxLength={10}
-                className="w-full px-4 py-3 bg-black/30 border border-pink-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500"
-              />
-              {/* <div className="flex items-start space-x-3 mt-6">
+              <form className="space-y-6">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  value={formData.name}
+                  onChange={changeValue}
+                  className="w-full px-4 py-3 bg-black/30 border border-pink-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500"
+                />
+                <input
+                  type="text"
+                  name="roll_no"
+                  placeholder="Admission Number"
+                  value={formData.roll_no}
+                  onChange={changeValue}
+                  className="w-full px-4 py-3 bg-black/30 border border-pink-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Personal Email Address"
+                  value={formData.email}
+                  onChange={changeValue}
+                  className="w-full px-4 py-3 bg-black/30 border border-pink-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500"
+                />
+                <input
+                  type="tel"
+                  name="phone_number"
+                  placeholder="Phone Number"
+                  value={formData.phone_number}
+                  onChange={changeValue}
+                  maxLength={10}
+                  className="w-full px-4 py-3 bg-black/30 border border-pink-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500"
+                />
+                {/* <div className="flex items-start space-x-3 mt-6">
                 <input
                   type="checkbox"
                   name="checkBox"
@@ -159,99 +191,123 @@ export default function Component() {
                   amFOSS
                 </label>
               </div> */}
-              <div className="flex items-start space-x-3 mt-6">
-                <input
-                  type="checkbox"
-                  name="checkBox2"
-                  checked={formData.checkBox2}
-                  onChange={changeValue}
-                  className="w-5 h-5 mt-0.5 accent-pink-500"
-                />
-                <label
-                  htmlFor="acknowledgment-2"
-                  className="text-sm text-gray-300 leading-relaxed"
-                >
-                  <span>By signing up for this workshop, I acknowledge that I have read and agree to the </span>
-                  <Link className="text-white hover:text-pink-400 underline" href={"/terms"}>Terms & Condition</Link>,{" "}
-                  <Link className="text-white hover:text-pink-400 underline" href={"/refund"}>Refund Policy</Link> and{" "}
-                  <Link className="text-white hover:text-pink-400 underline" href={"/privacy"}>Privacy Policy</Link>.
-                </label>
-              </div>
-
-            </form>
-          </div>
-          <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="space-y-6 w-full flex flex-col h-full items-center justify-center"
-          >
-            <div className="bg-black/20 rounded-xl p-6 border border-gray-700 w-full shadow-inner shadow-purple-900/20">
-              <table className="w-full text-sm md:text-base">
-                <thead>
-                  <tr className="text-white font-semibold border-b border-gray-600">
-                    <th className="text-left pb-2">Item</th>
-                    <th className="text-left pb-2">Price</th>
-                    <th className="text-left pb-2">Total</th>
-                  </tr>
-                </thead>
-                <tbody className="text-gray-300">
-                  <tr>
-                    <td className="py-2">Seat x 1</td>
-                    <td className="py-2">₹999</td>
-                    <td className="py-2">₹999</td>
-                  </tr>
-                  {/* <tr>
+                <div className="flex items-start space-x-3 mt-6">
+                  <input
+                    type="checkbox"
+                    name="checkBox2"
+                    checked={formData.checkBox2}
+                    onChange={changeValue}
+                    className="w-5 h-5 mt-0.5 accent-pink-500"
+                  />
+                  <label
+                    htmlFor="acknowledgment-2"
+                    className="text-sm text-gray-300 leading-relaxed"
+                  >
+                    <span>
+                      By signing up for this workshop, I acknowledge that I have
+                      read and agree to the{" "}
+                    </span>
+                    <Link
+                      className="text-white hover:text-pink-400 underline"
+                      href={"/terms"}
+                    >
+                      Terms & Condition
+                    </Link>
+                    ,{" "}
+                    <Link
+                      className="text-white hover:text-pink-400 underline"
+                      href={"/refund"}
+                    >
+                      Refund Policy
+                    </Link>{" "}
+                    and{" "}
+                    <Link
+                      className="text-white hover:text-pink-400 underline"
+                      href={"/privacy"}
+                    >
+                      Privacy Policy
+                    </Link>
+                    .
+                  </label>
+                </div>
+              </form>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="space-y-6 w-full flex flex-col h-full items-center justify-center"
+            >
+              <div className="bg-black/20 rounded-xl p-6 border border-gray-700 w-full shadow-inner shadow-purple-900/20">
+                <table className="w-full text-sm md:text-base">
+                  <thead>
+                    <tr className="text-white font-semibold border-b border-gray-600">
+                      <th className="text-left pb-2">Item</th>
+                      <th className="text-left pb-2">Price</th>
+                      <th className="text-left pb-2">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-300">
+                    <tr>
+                      <td className="py-2">Seat x 1</td>
+                      <td className="py-2">₹999</td>
+                      <td className="py-2">₹999</td>
+                    </tr>
+                    {/* <tr>
                     <td className="py-2">Taxes</td>
                     <td className="py-2">₹100</td>
                     <td className="py-2">₹100</td>
                   </tr> */}
-                </tbody>
-                <tfoot>
-                  <tr className="border-t border-gray-600">
-                    <td className="pt-4 text-white font-semibold text-lg">
-                      Total
-                    </td>
-                    <td></td>
-                    <td className="pt-4 text-white font-semibold text-lg">
-                      ₹999
-                    </td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-              disabled={isDisabled}
-              onClick={validateForm}
-              className="relative text-white font-bold py-4 px-12 rounded-lg text-xl overflow-hidden disabled:cursor-not-allowed"
-            >
-              <span
-                className={`
+                  </tbody>
+                  <tfoot>
+                    <tr className="border-t border-gray-600">
+                      <td className="pt-4 text-white font-semibold text-lg">
+                        Total
+                      </td>
+                      <td></td>
+                      <td className="pt-4 text-white font-semibold text-lg">
+                        ₹999
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                disabled={isDisabled}
+                onClick={validateForm}
+                className="relative text-white font-bold py-4 px-12 rounded-lg text-xl overflow-hidden disabled:cursor-not-allowed"
+              >
+                <span
+                  className={`
       absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 
       transition-opacity duration-500 ease-in-out
       ${isDisabled ? "opacity-0" : "opacity-100"}
     `}
-              />
-              <span
-                className={`
+                />
+                <span
+                  className={`
       absolute inset-0 bg-gradient-to-r from-gray-400 to-gray-500 
       transition-opacity duration-500 ease-in-out
       ${isDisabled ? "opacity-100" : "opacity-0"}
     `}
-              />
-              <span className="relative z-10">Register</span>
-            </motion.button>
-            <Link
-              href="/contact"
-              className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors">
-              <HelpCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-              <span className="text-sm font-medium">Need help? Contact us</span>
-            </Link>
-          </motion.div>
-        </div>
-      </motion.div>
-    </div>
+                />
+                <span className="relative z-10">Register</span>
+              </motion.button>
+              <Link
+                href="/contact"
+                className="group flex items-center gap-2 text-white hover:text-pink-400 transition-colors"
+              >
+                <HelpCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-sm font-medium">
+                  Need help? Contact us
+                </span>
+              </Link>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </>
   );
 }
