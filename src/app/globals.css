@@ -76,7 +76,7 @@ body::after {
   background-image:
     radial-gradient(
       circle at 65% 70%,
-      #f43f5ecc 0%,
+      #f43f5dc0 0%,
       #f43f5e33 25%,
       rgba(244, 63, 94, 0) 55%
     ),

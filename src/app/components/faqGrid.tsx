@@ -17,7 +17,7 @@ const FaqCard = ({ faq }: { faq: FAQ }) => {
           className="flex items-center justify-between cursor-pointer"
           onClick={() => setExpandCard(!expandCard)}
         >
-          <p className="font-semibold text-lg">{faq.question}</p>
+          <p className="font-semibold text-2xl">{faq.question}</p>
           <motion.div
             animate={{ rotate: expandCard ? 180 : 0 }}
             transition={{ duration: 0.3 }}
@@ -35,7 +35,7 @@ const FaqCard = ({ faq }: { faq: FAQ }) => {
               transition={{ duration: 0.3 }}
               className="mt-2"
             >
-              <p className="text-sm text-gray-300">{faq.answer}</p>
+              <p className="text-sm text-gray-300 text-xl">{faq.answer}</p>
             </motion.div>
           )}
         </AnimatePresence>

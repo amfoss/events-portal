@@ -88,7 +88,7 @@ export default function Schedule() {
           <div className="w-[80%] m-auto mt-1 h-1 bg-gradient-to-r  from-[#f07c8fff] to-[#8b5cf6]"></div>
         </div>
       </div>
-      <div className="min-h-screen py-12  text-white font-sans">
+      <div className=" py-12  text-white font-sans">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
             {sessions.map((session, i) => (
@@ -110,7 +110,6 @@ export default function Schedule() {
                 <p className="text-sm text-white/90">{session.topic}</p>
               </motion.div>
             ))}
-            /
           </AnimatePresence>
         </div>
       </div>
