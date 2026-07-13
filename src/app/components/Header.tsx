@@ -14,7 +14,7 @@ useEffect(() => {
   const fetchSeats = async () => {
     try {
       const res = await axios.get(
-        "  https://amfossworkshop.khushalch.me/seats-left/"
+        "https://amfossworkshop.khushalch.me/seats-left/"
       );
 
       setCurrentSeats(res.data.seat_left);
