@@ -1,11 +1,34 @@
 import { motion } from "framer-motion";
 import amFoss2 from "@/public/amFOSS2.png";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 interface headerProps {
   showSeats: boolean;
-  currentSeats: number;
 }
-export default function Header({ showSeats, currentSeats }: headerProps) {
+export default function Header({ showSeats }: headerProps) {
+const [currentSeats, setCurrentSeats] = useState(0);
+
+useEffect(() => {
+  const fetchSeats = async () => {
+    try {
+      const res = await axios.get(
+        "  https://amfossworkshop.khushalch.me/seats-left/"
+      );
+
+      setCurrentSeats(res.data.seat_left);
+
+      console.log("Response:", res.data);
+      console.log("Seats left:", res.data.seat_left);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  fetchSeats();
+}, []);
+
   return (
     <>
       <div className="text-center flex-col flex items-center px-5 mt-60 lg:mt-60 sm:mt-40 max-w-5xl mx-auto">

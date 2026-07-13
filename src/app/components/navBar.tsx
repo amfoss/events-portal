@@ -7,9 +7,9 @@ import amFOSSLogo from "@/public/amFoss.png";
 import Image from "next/image";
 import X from "@/public/x-social-media-black-icon.png";
 import { motion, AnimatePresence } from "framer-motion";
+import axios from "axios";
 
 interface NavBarProps {
-  currentSeats: number;
   triggerSeats: (trigger: boolean) => void;
 }
 
@@ -65,12 +65,32 @@ const NavBarLink = ({ label, section }: NavBarLinkProps) => {
   );
 };
 
-export default function NavBar({ currentSeats, triggerSeats }: NavBarProps) {
+export default function NavBar({ triggerSeats }: NavBarProps) {
   const [showSideMenu, setShowSideMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [showSeats, setShowSeats] = useState(false);
+  const [currentSeats, setCurrentSeats] = useState(0);
+
+useEffect(() => {
+  const fetchSeats = async () => {
+    try {
+      const res = await axios.get(
+        "  https://amfossworkshop.khushalch.me/seats-left/"
+      );
+
+      setCurrentSeats(res.data.seat_left);
+
+      console.log("Response:", res.data);
+      console.log("Seats left:", res.data.seat_left);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  fetchSeats();
+}, []);
 
   const handleResize = useCallback(() => {
     setIsMobile(window.innerWidth < 780);
