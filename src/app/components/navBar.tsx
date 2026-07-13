@@ -81,9 +81,6 @@ useEffect(() => {
       );
 
       setCurrentSeats(res.data.seat_left);
-
-      console.log("Response:", res.data);
-      console.log("Seats left:", res.data.seat_left);
     } catch (err) {
       console.error(err);
     }
