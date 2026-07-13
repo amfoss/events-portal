@@ -8,6 +8,7 @@ import { ArrowLeft, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import axios from "axios";
 import Script from "next/script";
+import {useRouter} from "next/navigation";
 
 export default function Component() {
   const [formData, setFormData] = useState<FormData>({
@@ -53,7 +54,7 @@ export default function Component() {
   };
 
   const isValidRollNumber = (roll: string): boolean => {
-    const rollRegex = /^am\.[a-z]{2}\.[a-z0-9]{10}$/;
+    const rollRegex = /^([aA][mM])\.[a-zA-Z]{2}\.[a-zA-Z0-9]{10}$/;
     return rollRegex.test(roll);
   };
 
@@ -71,6 +72,8 @@ export default function Component() {
       else if (!validPhone) toast.warn("Enter A Valid Phone Number");
     }
   };
+
+  const router = useRouter();
   const sendData = async () => {
     try {
       const { data } = await axios.post(
@@ -91,6 +94,7 @@ export default function Component() {
           );
 
           toast.success("Payment Successful");
+          router.push("/");
         },
       };
 
