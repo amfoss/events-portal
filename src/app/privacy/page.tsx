@@ -28,7 +28,7 @@ export default function RefundPolicyPage() {
             </h1>
             <div className="flex items-center justify-center gap-2 text-gray-400">
               <Calendar className="w-4 h-4" />
-              <span className="text-sm">Last Updated: 03-07-2025 14:17:40</span>
+              <span className="text-sm">Last Updated: 14-07-2026 21:55:20</span>
             </div>
           </div>
           <div className="text-center">
@@ -36,11 +36,11 @@ export default function RefundPolicyPage() {
               <section className="space-y-6"></section>
               <h2 className="text-xl font-semibold text-white mb-2">Introduction</h2>
               <p className="text-gray-300 leading-relaxed">
-                This privacy policy sets out how HRIDESH MATTAKATHARA GOPAKUMAR uses and protects any information that you give HRIDESH MATTAKATHARA GOPAKUMAR when you use this website.
+                This privacy policy sets out how TEJA SAI CHARAN BELLAMKONDA uses and protects any information that you give TEJA SAI CHARAN BELLAMKONDA when you use this website.
                 <br /><br />
-                HRIDESH MATTAKATHARA GOPAKUMAR is committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.
+                 is committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.
                 <br /><br />
-                HRIDESH MATTAKATHARA GOPAKUMAR may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes.
+                TEJA SAI CHARAN BELLAMKONDA may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes.
               </p>
               <br />
               <h2 className="text-xl font-semibold text-white mb-2">What We Collect</h2>
@@ -110,7 +110,7 @@ export default function RefundPolicyPage() {
               <p className="text-gray-300 leading-relaxed">
                 We will not sell, distribute or lease your personal information to third parties unless we have your permission or are required by law to do so. We may use your personal information to send you promotional information about third parties which we think you may find interesting if you tell us that you wish this to happen.
                 <br /><br />
-                You may request details of personal information which we hold about you under the Data Protection Act 1998. A small fee will be payable. If you would like a copy of the information held on you please write to us at hridesh699@gmail.com.
+                You may request details of personal information which we hold about you under the Data Protection Act 1998. A small fee will be payable. If you would like a copy of the information held on you please write to us at amritapurifoss@gmail.com.
                 <br /><br />
                 If you believe that any information we are holding on you is incorrect or incomplete, please write to or email us as soon as possible, at the above address. We will promptly correct any information found to be incorrect.
               </p>
