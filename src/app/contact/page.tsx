@@ -35,7 +35,7 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-pink-400" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
-                <p className="text-gray-300 text-sm break-all">hridesh699@gmail.com</p>
+                <p className="text-gray-300 text-sm break-all">amritapurifoss@gmail.com</p>
               </div>
             </div>
 
@@ -45,7 +45,7 @@ export default function ContactPage() {
                   <Phone className="w-6 h-6 text-purple-400" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
-                <p className="text-gray-300 text-sm mb-2">+91 9995613985</p>
+                <p className="text-gray-300 text-sm mb-2">+91 7799981858</p>
                 <div className="flex items-center justify-center gap-1 text-xs text-gray-400">
                   <Clock className="w-3 h-3" />
                   <span>Mon-Fri, 5 PM - 12 AM</span>
@@ -72,9 +72,9 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-white font-semibold mb-2">Legal Entity Name</h3>
                 <p className="text-gray-300 text-sm">
-                  HRIDESH<br />
-                  MATTAKATHARA<br />
-                  GOPAKUMAR
+                  TEJA SAI<br />
+                  CHARAN<br />
+                  BELLAMKONDA
                 </p>
               </div>
             </div>
