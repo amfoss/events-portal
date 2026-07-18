@@ -48,15 +48,14 @@ useEffect(() => {
           <div className="bg-gradient-to-r  from-[#f07c8fff] to-[#8b5cf6] text-white flex items-center rounded-md px-3 py-1 mx-4 text-xl sm:text-xl md:text-3xl ">
             {currentSeats + " seats"}
           </div>
-          {/* left, register today! */}
-          left.
+          left, register today!
         </motion.div>
 
         <motion.a
           href="/register"
           whileHover={{ y: -10 }}
           whileTap={{ scale: 0.8 }}
-          className="bg-gradient-to-r mt-12  from-[#f07c8fff] to-[#8b5cf6] text-white px-10 py-4 rounded-xl font-Lalezar text-xl sm:text-xl md:text-3xl font-bold uppercase opacity-50 cursor-not-allowed"
+          className="bg-gradient-to-r mt-12  from-[#f07c8fff] to-[#8b5cf6] text-white px-10 py-4 rounded-xl font-Lalezar text-xl sm:text-xl md:text-3xl  font-bold uppercase"
         >
           REGISTER NOW!
         </motion.a>
